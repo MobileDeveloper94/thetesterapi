@@ -15,19 +15,19 @@ function RenderMenu() {
     html = html + '<div class="collapse navbar-collapse" id="navbarsExampleDefault">';
     html = html + '<ul class="navbar-nav mr-auto">';
     html = html + '<li class="nav-item active">';
-    html = html + '<a class="nav-link" href="#inicio">Início <span class="sr-only">(current)</span></a>';
+    html = html + '<a class="nav-link" href="home.html#inicio">Início <span class="sr-only">(current)</span></a>';
     html = html + '</li>';
     
     html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="#saiba">Saiba Como</a>';
+    html = html + '<a class="nav-link" href="home.html#saiba">Saiba Como</a>';
     html = html + '</li>';
 
     html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="#quem">Quem Somos</a>';
+    html = html + '<a class="nav-link" href="home.html#quem">Quem Somos</a>';
     html = html + '</li>';
 
     html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="#contato">Contato</a>';
+    html = html + '<a class="nav-link" href="home.html#contato">Contato</a>';
     html = html + '</li>';
 
     html = html + '<li class="nav-item">';
