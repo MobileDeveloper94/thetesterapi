@@ -7,7 +7,7 @@ function MainPage() {
 function RenderMenu() {
     var html = "";
     
-    html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#FFF">';
+    html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:green">';
     html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/thethester.jpg" class="img" width="60px"/></a>';
     html = html + '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">';
     html = html + '<span class="navbar-toggler-icon"></span>';
