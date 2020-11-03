@@ -7,7 +7,7 @@ function MainPage() {
 function RenderMenu() {
     var html = "";
     
-    html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:green">';
+    html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#FFF">';
     html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/thethester.jpg" class="img" width="60px"/></a>';
     html = html + '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">';
     html = html + '<span class="navbar-toggler-icon"></span>';
@@ -35,14 +35,13 @@ function RenderMenu() {
     html = html + '</li>';
 
    
-    //<!--<li class="nav-item dropdown">
-    //    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-    //    <div class="dropdown-menu" aria-labelledby="dropdown01">
-    //        <a class="dropdown-item" href="#">Action</a>
-    //        <a class="dropdown-item" href="#">Another action</a>
-    //        <a class="dropdown-item" href="#">Something else here</a>
-    //    </div>
-    //</li>-->
+    html = html + '<li class="nav-item dropdown">';
+    html = html + '<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>';
+    html = html + '<div class="dropdown-menu" aria-labelledby="dropdown01">';
+    html = html + '<a class="dropdown-item" href="LGPD.html">LGPD</a>';
+    html = html + '</div>';
+    html = html + '</li>';
+
     html = html + '</ul>';
     //<!--<form class="form-inline my-2 my-lg-0">
     //    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
