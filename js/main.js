@@ -34,24 +34,11 @@ function RenderMenu() {
     html = html + '<a class="nav-link" href="diario-de-bordo.html">Diário de Bordo</a>';
     html = html + '</li>';
 
-   
-    html = html + '<li class="nav-item dropdown">';
-    html = html + '<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>';
-    html = html + '<div class="dropdown-menu" aria-labelledby="dropdown01">';
-    html = html + '<a class="dropdown-item" href="LGPD.html">LGPD</a>';
-    html = html + '</div>';
-    html = html + '</li>';
+    html = html + '<li class="nav-item">';
+    html = html + '<a class="nav-link" href="servicos.html">Serviços</a>';
+    html = html + '</li>';    
 
     html = html + '</ul>';
-    //<!--<form class="form-inline my-2 my-lg-0">
-    //    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-    //        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    //</form>-->
-    // html = html + '<div class="login">';
-    // html = html + '<a href="#" class="nav-link">';
-    // html = html + '<i class="fas fa-user"></i> Login';
-    // html = html + '</a>';
-    // html = html + '</div>';
     html = html + '</div>';
     html = html + '</nav>';
 
@@ -74,6 +61,17 @@ function RenderFooter() {
     html = html + '</footer>';
 
     $("main").append(html);
+}
+
+function SelectContato(destino){
+    if(destino === "email"){
+       $('#contatoSelect').fadeOut();
+       $('#contatoEmail').fadeIn();
+
+    }
+    else if(destino === "whatsapp"){
+        window.location.href = "https://api.whatsapp.com/send?phone=5511987175315&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao";
+    }
 }
 
 
