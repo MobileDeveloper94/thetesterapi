@@ -51,5 +51,7 @@ function EnviaEmail(){
     }
 
     //tudo ok, prosseguir
-    
+    var sender = SendEmail("paulosduarte7@gmail.com", Contato.Email, "Teste de envio de email", Contato.Mensagem);
+
+    console.log(sender);
 }
