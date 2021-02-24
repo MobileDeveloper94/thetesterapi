@@ -215,28 +215,33 @@
                             <div class="form-group">
                                 <label for="txtNome">Nome</label>
                                 <input type="text" class="form-control" id="txtNome" aria-describedby="emailHelp" placeholder="Seu nome">
-
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Nome com conteúdo vazio.</span></small>
                             </div>
                             <div class="form-group">
                                 <label for="txtEmail">E-mail</label>
                                 <input type="email" class="form-control" id="txtEmail" placeholder="Seu e-mail">
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Mensagem</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="txtMensagem">Mensagem</label>
+                                <textarea class="form-control" id="txtMensagem" rows="3"></textarea>
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Mensagem com conteúdo vazio.</span></small>
                             </div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+                                <input type="checkbox" class="form-check-input" id="cbDadosContato">
+                                <label class="form-check-label" for="cbDadosContato">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroContato"><i class="fas fa-exclamation-triangle"></i> Por favor, indique que está de acordo em entrarmos em contato.</span></small>
+                                
                             </div>
                             <div class="space"></div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                <label class="form-check-label" for="exampleCheck2">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+                                <input type="checkbox" class="form-check-input" id="cbDadosMarketing">
+                                <label class="form-check-label" for="cbDadosMarketing">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+                                
                             </div>
                             <div class="space"></div>
-
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            
+                            <button type="button" onclick="EnviaEmail()" class="btn btn-primary">Enviar</button>
                         </form>
                         <div class="space"></div>
                     </div>

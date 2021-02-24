@@ -63,14 +63,14 @@ function RenderFooter() {
     $("main").append(html);
 }
 
-function SelectContato(destino){
-    if(destino === "email"){
-       $('#contatoSelect').fadeOut();
-       $('#contatoEmail').fadeIn();
 
-    }
-    else if(destino === "whatsapp"){
-        window.location.href = "https://api.whatsapp.com/send?phone=5511987175315&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao";
+
+function ValidaEmail(email){
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(!regex.test(email)) {
+        return false;
+    }else{
+        return true;
     }
 }
 
