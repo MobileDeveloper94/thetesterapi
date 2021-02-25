@@ -4,9 +4,6 @@ $(document).ready(function () {
     RenderMenu();
     RenderFooter();
     
-   
-    $('#modalLoading').modal('show');
-
 });
 
 function SelectContato(destino){
@@ -54,6 +51,7 @@ function EnviaEmail(){
     }
     
     //tudo ok, prosseguir
+    $('#modalLoading').modal('show');
 
     var objMail = {
         Nome: Contato.Nome,
@@ -69,5 +67,10 @@ function EnviaEmail(){
     $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
         .done(function( data ) {
             console.log( "Data Loaded: " + data );
+            $('#modalLoading').modal('hide');
+            $('#modalSuccess').modal('show');
+
     });
+
+    
 }
