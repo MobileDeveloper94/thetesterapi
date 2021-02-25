@@ -4,6 +4,9 @@ $(document).ready(function () {
     RenderMenu();
     RenderFooter();
     
+   
+    $('#modalLoading').modal('show');
+
 });
 
 function SelectContato(destino){
@@ -49,9 +52,22 @@ function EnviaEmail(){
         $('#txtErroContato').show();
         return; 
     }
-
+    
     //tudo ok, prosseguir
-    var sender = SendEmail("paulosduarte7@gmail.com", Contato.Email, Contato.Nome + " enviou uma nova mensagem", Contato.Mensagem);
 
-    console.log(sender);
+    var objMail = {
+        Nome: Contato.Nome,
+        EmailFrom: Contato.EmailFrom,
+        EmailTo: Contato.EmailTo,
+        Mensagem: Contato.Mensagem,
+        Assunto: "The Thester recebeu uma nova mensagem",
+        Alias: "The Thester Site",
+        Key: "e19055b167dd976ae6a93174d3f3a709d5c43043" 
+    };
+
+    
+    $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
+        .done(function( data ) {
+            console.log( "Data Loaded: " + data );
+    });
 }
