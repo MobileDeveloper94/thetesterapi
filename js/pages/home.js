@@ -55,14 +55,14 @@ function EnviaEmail(){
 
     var objMail = {
         Nome: Contato.Nome,
-        EmailFrom: Contato.EmailFrom,
-        EmailTo: Contato.EmailTo,
+        EmailFrom: Contato.Email,
+        EmailTo: 'contato@thethester.com.br',
         Mensagem: Contato.Mensagem,
         Assunto: "The Thester recebeu uma nova mensagem",
         Alias: "The Thester Site",
         Key: "e19055b167dd976ae6a93174d3f3a709d5c43043" 
     };
-
+    // console.log(objMail);
     
     $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
         .done(function( data ) {
