@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/pages/home.css" rel="stylesheet">
-
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JS -->
     <script src="js/main.js"></script>
     <script src="js/pages/home.js"></script>
 
@@ -215,28 +215,33 @@
                             <div class="form-group">
                                 <label for="txtNome">Nome</label>
                                 <input type="text" class="form-control" id="txtNome" aria-describedby="emailHelp" placeholder="Seu nome">
-
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Nome com conteúdo vazio.</span></small>
                             </div>
                             <div class="form-group">
                                 <label for="txtEmail">E-mail</label>
                                 <input type="email" class="form-control" id="txtEmail" placeholder="Seu e-mail">
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Mensagem</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="txtMensagem">Mensagem</label>
+                                <textarea class="form-control" id="txtMensagem" rows="3"></textarea>
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Mensagem com conteúdo vazio.</span></small>
                             </div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+                                <input type="checkbox" class="form-check-input" id="cbDadosContato">
+                                <label class="form-check-label" for="cbDadosContato">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroContato"><i class="fas fa-exclamation-triangle"></i> Por favor, indique que está de acordo em entrarmos em contato.</span></small>
+                                
                             </div>
                             <div class="space"></div>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                <label class="form-check-label" for="exampleCheck2">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+                                <input type="checkbox" class="form-check-input" id="cbDadosMarketing">
+                                <label class="form-check-label" for="cbDadosMarketing">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+                                
                             </div>
                             <div class="space"></div>
-
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            
+                            <button type="button" onclick="EnviaEmail()" class="btn btn-primary">Enviar</button>
                         </form>
                         <div class="space"></div>
                     </div>
@@ -246,5 +251,39 @@
         </section>
 
     </main><!-- /.container -->
+    
+<!-- Modal Loading-->
+<div class="modal fade" id="modalLoading" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalLoadingLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body text-center">
+            <i class="fab fa-galactic-republic fa-spin fa-5x" style="color:#696969"></i>
+            <br>
+            <small>Aguarde..</small>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Success-->
+<div class="modal fade" id="modalSuccess" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body text-center">
+            <i class="fas fa-check-double" style="color:blue"></i> Enviado com sucesso.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
+
+
 </html>
