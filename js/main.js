@@ -8,7 +8,7 @@ function RenderMenu() {
     var html = "";
     
     html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#FFF">';
-    html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/LogoHorizontal.png" class="img" width="160px"/></a>';
+    html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/LogoHorizontal.png" class="img" width="320px"/></a>';
     html = html + '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">';
     html = html + '<span class="navbar-toggler-icon"></span>';
     html = html + '</button>';
