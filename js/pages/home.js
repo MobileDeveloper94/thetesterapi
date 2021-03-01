@@ -1,11 +1,3 @@
-//start
-$(document).ready(function () {
-
-    RenderMenu();
-    RenderFooter();
-    
-});
-
 function SelectContato(destino){
     if(destino === "email"){
        $('#contatoSelect').fadeOut();
@@ -13,7 +5,7 @@ function SelectContato(destino){
 
     }
     else if(destino === "whatsapp"){
-        window.location.href = "https://api.whatsapp.com/send?phone=5511987175315&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao";
+        window.open("https://api.whatsapp.com/send?phone=5511987175315&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao");
     }
 }
 
@@ -66,7 +58,7 @@ function EnviaEmail(){
     
     $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
         .done(function( data ) {
-            console.log( "Data Loaded: " + data );
+            console.log(data);
             $('#modalLoading').modal('hide');
             $('#modalSuccess').modal('show');
 

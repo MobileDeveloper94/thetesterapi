@@ -8,11 +8,39 @@ function RenderMenu() {
     var html = "";
     
     html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#FFF">';
-    html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/LogoHorizontal.png" class="img" width="160px"/></a>';
+    html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/thethester.jpg" class="img" width="60px"/></a>';
     html = html + '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">';
     html = html + '<span class="navbar-toggler-icon"></span>';
     html = html + '</button>';
     html = html + '<div class="collapse navbar-collapse" id="navbarsExampleDefault">';
+
+    html = html + '<ul class="navbar-nav mr-auto" style="color:#FFF">';
+    html = html + '<li class="nav-item active">';
+    html = html + 'Início';
+    html = html + '</li>';
+    
+    html = html + '<li class="nav-item">';
+    html = html + 'Saiba Como';
+    html = html + '</li>';
+
+    html = html + '<li class="nav-item">';
+    html = html + 'Quem Somos';
+    html = html + '</li>';
+
+    html = html + '<li class="nav-item">';
+    html = html + 'Contato';
+    html = html + '</li>';
+
+    html = html + '<li class="nav-item">';
+    html = html + 'Diário de Bordo';
+    html = html + '</li>';
+
+    html = html + '<li class="nav-item">';
+    html = html + 'Serviços';
+    html = html + '</li>';    
+
+    html = html + '</ul>';
+
     html = html + '<ul class="navbar-nav mr-auto">';
     html = html + '<li class="nav-item active">';
     html = html + '<a class="nav-link" href="home.html#inicio">Início <span class="sr-only">(current)</span></a>';
@@ -39,6 +67,8 @@ function RenderMenu() {
     html = html + '</li>';    
 
     html = html + '</ul>';
+
+    
     html = html + '</div>';
     html = html + '</nav>';
 
@@ -54,11 +84,28 @@ function RenderFooter() {
     html = html + '<a href="https://www.facebook.com/the.thester" target="_blank" class="midia"><i class="fab fa-facebook"></i></a>';
     html = html + '&nbsp;';
     html = html + '<a href="https://www.instagram.com/the.thester/" target="_blank" class="midia"><i class="fab fa-instagram"></i></a>';
+    html = html + '&nbsp;';
+    html = html + '<a href="https://www.linkedin.com/company/the-thester/" target="_blank" class="midia"><i class="fab fa-linkedin"></i></a>';
     html = html + '<br />';
-    html = html + '<small>The Thester &copy; 2020</small>';
+    html = html + '<small>The Thester &copy; ' + new Date().getFullYear() + '</small>';
 
     html = html + '</div>';
     html = html + '</footer>';
+
+    html = html + '<div class="alert alert-dismissible fade show" id="alertCookie" role="alert">';
+    html = html + '<div class="container">';
+    html = html + '<div class="row">';
+    html = html + '<div class="col-10">';
+    html = html + '<strong>Atenção!</strong> Este site utiliza cookies essenciais de navegação, a fim de garantir uma melhor experiência de uso. Ao continuar a navegação, você concorda com o uso dessa tecnologia.';
+    html = html + '</div>';
+    html = html + '<div class="col-2">';
+    html = html + '<button type="button" class="btn btn-primary" onclick="AllowCookie()" data-dismiss="alert" aria-label="Close">';
+    html = html + 'Aceito';
+    html = html + '</button>';
+    html = html + '</div>';
+    html = html + '</div>';
+    html = html + '</div>';
+    html = html + '</div>';
 
     $("main").append(html);
 }
@@ -75,4 +122,39 @@ function ValidaEmail(email){
 }
 
 
+
+function CookieIsAllowed(){
+    var name = "allowCookie" + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    var count = 0;
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+          if (c.substring(name.length, c.length) == "S") {
+              
+              $("#alertCookie").hide();
+          }
+      }
+    }
     
+}
+
+function AllowCookie() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "allowCookie" + "=" + "S" + ";" + expires + ";path=/";
+    
+} 
+
+//start
+$(document).ready(function () {
+    RenderMenu();
+    RenderFooter();
+    CookieIsAllowed();
+    
+});
