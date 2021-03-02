@@ -156,5 +156,5 @@ $(document).ready(function () {
     RenderMenu();
     RenderFooter();
     CookieIsAllowed();
-    
+    $('head').append('<link rel="shortcut icon" href="images/favicon.png">');
 });
