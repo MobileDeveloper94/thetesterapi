@@ -96,7 +96,7 @@ function RenderFooter() {
     html = html + '<div class="container">';
     html = html + '<div class="row">';
     html = html + '<div class="col-10">';
-    html = html + '<strong>Atenção!</strong> Este site utiliza cookies essenciais de navegação, a fim de garantir uma melhor experiência de uso. Ao continuar a navegação, você concorda com o uso dessa tecnologia.';
+    html = `${html}<strong>Atenção!</strong> Este site utiliza <a href="./files/PoliticaCookie.pdf" target="_blank">cookies essenciais de navegação</a>, a fim de garantir uma melhor experiência de uso. Ao continuar a navegação, você concorda com o uso dessa tecnologia e com os termos da <a href="./files/PoliticaPrivacidadeTheThester.pdf" target="_blank">Política de privacidade.</a>`;
     html = html + '</div>';
     html = html + '<div class="col-2">';
     html = html + '<button type="button" class="btn btn-primary" onclick="AllowCookie()" data-dismiss="alert" aria-label="Close">';
@@ -149,7 +149,13 @@ function AllowCookie() {
     var expires = "expires="+ d.toUTCString();
     document.cookie = "allowCookie" + "=" + "S" + ";" + expires + ";path=/";
     
-} 
+}
+
+function OpenFile(file){
+    var dirFiles = "";
+
+    window.href = dirFiles & file;
+}
 
 //start
 $(document).ready(function () {
