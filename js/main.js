@@ -143,6 +143,7 @@ function OpenFile(file){
 
 //start
 $(document).ready(function () {
+    $("#voltarTopo").hide();
     RenderMenu();
     RenderFooter();
     CookieIsAllowed();
