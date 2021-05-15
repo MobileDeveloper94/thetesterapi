@@ -5,7 +5,7 @@ function SelectContato(destino){
 
     }
     else if(destino === "whatsapp"){
-        window.open("https://api.whatsapp.com/send?phone=5511987175315&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao");
+        window.open("https://api.whatsapp.com/send?phone=5511978526516&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao");
     }
 }
 
