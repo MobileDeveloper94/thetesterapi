@@ -7,70 +7,52 @@ function MainPage() {
 function RenderMenu() {
     var html = "";
     
-    html = html + '<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#FFF">';
-    html = html + '<a class="navbar-brand" href="./home.html"><img src="./images/LogoHorizontal.png" class="img" width="166px"/></a>';
-    html = html + '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">';
-    html = html + '<span class="navbar-toggler-icon"></span>';
-    html = html + '</button>';
-    html = html + '<div class="collapse navbar-collapse" id="navbarsExampleDefault">';
-
-    html = html + '<ul class="navbar-nav mr-auto" style="color:#FFF">';
-    html = html + '<li class="nav-item active">';
-    html = html + 'Início';
-    html = html + '</li>';
     
-    html = html + '<li class="nav-item">';
-    html = html + 'Saiba Como';
-    html = html + '</li>';
 
-    html = html + '<li class="nav-item">';
-    html = html + 'Quem Somos';
-    html = html + '</li>';
-
-    html = html + '<li class="nav-item">';
-    html = html + 'Contato';
-    html = html + '</li>';
-
-    html = html + '<li class="nav-item">';
-    html = html + 'Diário de Bordo';
-    html = html + '</li>';
-
-    html = html + '<li class="nav-item">';
-    html = html + 'Serviços';
-    html = html + '</li>';    
-
-    html = html + '</ul>';
-
-    html = html + '<ul class="navbar-nav mr-auto">';
-    html = html + '<li class="nav-item active">';
-    html = html + '<a class="nav-link" href="home.html#inicio">Início <span class="sr-only">(current)</span></a>';
-    html = html + '</li>';
+    html = html + `
+    <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="./home.html"><img src="./images/LogoHorizontal.png" class="img" width="113px"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExample01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        <a class="nav-link" href="home.html#saiba">Saiba Como</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="home.html#quem">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="home.html#contato">Contato</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="diario-de-bordo.html">Diário de Bordo</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="servicos.html">Serviços</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="politica-privacidade.html">Política de Privacidade</a>
+        </li>
+        <li class="nav-item">
+        <hr>
+        <a href="https://www.facebook.com/the.thester" target="_blank" class="lnkicon"><i class="fab fa-facebook"></i></a>
+        &nbsp;
+        <a href="https://www.instagram.com/the.thester/" target="_blank" class="lnkicon"><i class="fab fa-instagram"></i></a>
+        &nbsp;
+        <a href="https://www.linkedin.com/company/the-thester/" target="_blank" class="lnkicon"><i class="fab fa-linkedin"></i></a>
+        &nbsp;
+        <a href="https://api.whatsapp.com/send?phone=5511978526516&text=Ol%C3%A1%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao" target="_blank" class="lnkicon"><i class="fab fa-whatsapp"></i></a>
     
-    html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="home.html#saiba">Saiba Como</a>';
-    html = html + '</li>';
+        </li>
+      </ul>
+    </div>
+  </nav>
+    `;
 
-    html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="home.html#quem">Quem Somos</a>';
-    html = html + '</li>';
 
-    html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="home.html#contato">Contato</a>';
-    html = html + '</li>';
-
-    html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="diario-de-bordo.html">Diário de Bordo</a>';
-    html = html + '</li>';
-
-    html = html + '<li class="nav-item">';
-    html = html + '<a class="nav-link" href="servicos.html">Serviços</a>';
-    html = html + '</li>';    
-
-    html = html + '</ul>';
-
-    
-    html = html + '</div>';
-    html = html + '</nav>';
 
     $("#menu").html(html);
 }
@@ -108,7 +90,7 @@ function RenderFooter() {
     html = html + '</div>';
     html = html + '</div>';
     html = html + '</div>';
-
+    html = html + '<div id="voltarTopo"><a href="#" id="subir" class="btn btn-dark"><i class="fas fa-arrow-up fa-2x"></i></a></div>';
     $("main").append(html);
 }
 
@@ -164,5 +146,20 @@ $(document).ready(function () {
     RenderMenu();
     RenderFooter();
     CookieIsAllowed();
+    
     $('head').append('<link rel="shortcut icon" href="images/favicon.png">');
+    
+    $('#subir').click(function(){
+		$('html, body').animate({scrollTop:0}, 'slow');
+		return false;
+	});
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 75) {
+            $("#voltarTopo").show();
+        }else{
+            $("#voltarTopo").hide();
+        }
+    });
+
 });

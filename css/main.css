@@ -15,7 +15,7 @@
 }
 
 body {
-    padding-top: 5rem;
+    
     background-color: #d9d9d9;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -62,4 +62,18 @@ html {
     border: 0;
     bottom: 0;
 
+}
+
+.lnkicon{
+    color: rgba(255,255,255,.5);   
+}
+
+.lnkicon:hover{
+    color: rgba(255,255,255,.75);   
+}
+
+#subir{
+	position:fixed;
+	bottom:1.5em;
+	right:1.5em;
 }
