@@ -88,29 +88,27 @@ function Receber(arg1, arg2){
 
     $.post( "https://thethestermailing.000webhostapp.com/gravarparticipante.php", Participante)
         .done(function( data ) {
-            console.log(data);
-            
-            
+            console.log(data);            
 
     });
         
-    // var objMail = {
-    //     Nome: Participante.Nome,
-    //     EmailFrom: Participante.Email,
-    //     EmailTo: 'contato@thethester.com.br',
-    //     Mensagem: "Obrigado por se registrar em TheThester.com! <br><br> Segue anexo o seu material, aproveite!",
-    //     Assunto: "Material extra The Thester pra você",
-    //     Alias: "The Thester Site",
-    //     Key: "e19055b167dd976ae6a93174d3f3a709d5c43043",
-    //     Anexo: arg2 
-    // };
-    // console.log(objMail);
+    var objMail = {
+        Nome: Participante.Nome,
+        EmailFrom: Participante.Email,
+        EmailTo: 'contato@thethester.com.br',
+        Mensagem: "Obrigado por se registrar em TheThester.com! <br><br> Segue anexo o seu material, aproveite!",
+        Assunto: "Material extra The Thester pra você",
+        Alias: "The Thester Site",
+        Key: "e19055b167dd976ae6a93174d3f3a709d5c43043",
+        Anexo: arg2 
+    };
+    console.log(objMail);
             
-    // $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
-    //     .done(function( data ) {
-    //         console.log(data);
-    //         $('#modalLoading').modal('hide');
-    //         $('#modalSuccess').modal('show');
-    //         //window.location.assign('home.html');
-    // });
+    $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
+        .done(function( data ) {
+            console.log(data);
+            $('#modalLoading').modal('hide');
+            $('#modalSuccess').modal('show');
+            //window.location.assign('home.html');
+    });
 }
