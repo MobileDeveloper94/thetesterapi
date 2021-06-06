@@ -86,7 +86,7 @@ function Receber(arg1, arg2){
     $('#modalLoading').modal('show');
 
 
-    $.post( "https://thethestermailing.000webhostapp.com/gravaparticipante.php", Participante)
+    $.post( "https://thethestermailing.000webhostapp.com/gravarparticipante.php", Participante)
         .done(function( data ) {
             console.log(data);
             
