@@ -8,10 +8,20 @@ $(document).ready(function () {
 
     var id = data['id'].split("-");
     var nomeArquivo = "";
+    var fileName = "";
+
+    switch(id[0]){
+        case 'Ebook':
+            fileName = "Ebooks\\";
+            break;
+        default:
+            Erro('Tipo Arquivo não encontrado!');
+    }
 
     switch(id[1]){
         case 'psc':
             nomeArquivo = "Privacidade de dados na psicologia";
+            fileName = fileName + "Ebook1-Psicologia.pdf";
             break;
         default:
             Erro('Arquivo não encontrado!');
@@ -22,7 +32,7 @@ $(document).ready(function () {
 
 
     $("#btnReceber").click(function() {
-        Receber(id[1]);
+        Receber(id[1], fileName);
     });
 
 });
@@ -32,7 +42,7 @@ function Erro(arg){
     window.location.assign('materiais.html');
 }
 
-function Receber(arg){
+function Receber(arg1, arg2){
     var Participante = {
         Nome: $('#txtNome').val(),
         Empresa: $('#txtEmpresa').val(),
@@ -88,7 +98,7 @@ function Receber(arg){
                 Assunto: "Material extra The Thester pra você",
                 Alias: "The Thester Site",
                 Key: "e19055b167dd976ae6a93174d3f3a709d5c43043",
-                Anexo: fileName 
+                Anexo: arg2 
             };
             console.log(objMail);
                     
