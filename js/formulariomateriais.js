@@ -49,7 +49,7 @@ function Receber(arg1, arg2){
         Cargo: $('#txtCargo').val(),
         Telefone: $('#txtTelefone').val(),
         Email: $('#txtEmail').val(),
-        Id: arg,
+        Id: arg1,
         Key: "e19055b167dd976ae6a93174d3f3a709d5c43043"
     };
 
