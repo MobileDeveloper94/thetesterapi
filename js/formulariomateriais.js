@@ -94,8 +94,8 @@ function Receber(arg1, arg2){
         
     var objMail = {
         Nome: Participante.Nome,
-        EmailFrom: Participante.Email,
-        EmailTo: 'contato@thethester.com.br',
+        EmailTo: Participante.Email,
+        EmailFrom: 'contato@thethester.com.br',
         Mensagem: "Obrigado por se registrar em TheThester.com! <br><br> Segue anexo o seu material, aproveite!",
         Assunto: "Material extra The Thester pra você",
         Alias: "The Thester Site",
