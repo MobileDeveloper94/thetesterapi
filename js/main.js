@@ -34,6 +34,9 @@ function RenderMenu() {
         <a class="nav-link" href="servicos.html">Serviços</a>
         </li>
         <li class="nav-item">
+        <a class="nav-link" href="materiais.html">Materiais</a>
+        </li>
+        <li class="nav-item">
         <a class="nav-link" href="politica-privacidade.html">Política de Privacidade</a>
         </li>
         <li class="nav-item">
@@ -140,6 +143,23 @@ function OpenFile(file){
 
     window.href = dirFiles & file;
 }
+
+
+function GetUrlData(){
+    var query = location.search.slice(1);
+    var partes = query.split('&');
+    var data = {};
+    partes.forEach(function (parte) {
+        var chaveValor = parte.split('=');
+        var chave = chaveValor[0];
+        var valor = chaveValor[1];
+        data[chave] = valor;
+    });
+
+    return data;
+}
+
+
 
 //start
 $(document).ready(function () {

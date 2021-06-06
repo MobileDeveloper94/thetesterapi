@@ -61,7 +61,6 @@ function EnviaEmail(){
             console.log(data);
             $('#modalLoading').modal('hide');
             $('#modalSuccess').modal('show');
-
     });
 
     

@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Website">
+    <meta name="author" content="PetSoft">
+    <title>The Thester | Downloads</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/pages/home.css" rel="stylesheet">
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/formulariomateriais.js"></script>
+    <style>
+        #lista {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #FFF;
+        }
+
+        .card{
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu"></div>
+
+    <main role="main" class="container-fluid">
+
+        <section title="downloads">
+            <div class="container" id="lista">
+                <h4 class="text-center">Preencha os dados abaixo para receber o material gratuitamente!</h2>
+                <hr />
+                <div class="space"></div>
+
+                <div class="row">
+                    
+                    <div class="col-md-6 offset-md-3">
+                        <h3 style="color: gray" id="nm_arquivo" class="text-center">Nome do Ebook</h3>
+
+                        <hr>
+
+                        <form>
+                            <div class="form-group">
+                              <label for="txtNome">Nome</label>
+                              <input type="text" class="form-control" id="txtNome">
+                              <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Campo obrigatório.</span></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtEmpresa">Empresa</label>
+                                <input type="text" class="form-control" id="txtEmpresa" >
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroEmpresa"><i class="fas fa-exclamation-triangle"></i> Campo obrigatório.</span></small>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="txtCargo">Cargo</label>
+                                <input type="text" class="form-control" id="txtCargo" >
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroCargo"><i class="fas fa-exclamation-triangle"></i> Campo obrigatório.</span></small>
+
+                              </div>
+
+                              <div class="form-group">
+                                <label for="txtTelefone">Telefone</label>
+                                <input type="number" class="form-control" id="txtTelefone" >
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroTelefone"><i class="fas fa-exclamation-triangle"></i> Campo obrigatório.</span></small>
+
+                              </div>
+
+                            <div class="form-group">
+                                <label for="txtEmail">E-mail</label>
+                                <input type="email" class="form-control" id="txtEmail">
+                                <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small>
+                            </div>
+                            <p>
+                                <small>Importante: não utilizaremos seus dados para fins comerciais e não consentidos pelo titular. Para mais informações acesse a nossa <a href="politica-privacidade.html">política de privacidade</a>.</small>
+                            </p>
+                            <div class="form-group text-center">
+                                <a class="btn btn-primary" id="btnReceber">Receber o material</a>
+                            </div>  
+                          </form>
+                          
+                    </div>
+
+                </div>
+
+                <div class="space"></div>
+
+            </div>
+            
+        </section>
+
+    </main><!-- /.container -->
+
+    <!-- Modal Loading-->
+<div class="modal fade" id="modalLoading" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalLoadingLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body text-center">
+            <i class="fab fa-galactic-republic fa-spin fa-5x" style="color:#696969"></i>
+            <br>
+            <small>Aguarde..</small>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Success-->
+<div class="modal fade" id="modalSuccess" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body text-center">
+            <i class="fas fa-check-double fa-2x" style="color:blue"></i> O material foi enviado com sucesso para o endereço de e-mail cadastrado.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</body>
+</html>
