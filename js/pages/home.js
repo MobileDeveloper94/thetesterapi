@@ -44,12 +44,17 @@ function EnviaEmail(){
     
     //tudo ok, prosseguir
     $('#modalLoading').modal('show');
+    
+    var msg = "Voce recebeu uma mensagem:<br>";
+    msg = msg + "De: " + Contato.Nome + "<br>";  
+    msg = msg + "Email: " + Contato.Email + "<br>";  
+    msg = msg + "Mensagem: <br>" + Contato.Mensagem + "<br>";  
 
     var objMail = {
         Nome: Contato.Nome,
         EmailFrom: Contato.Email,
         EmailTo: 'contato@thethester.com.br',
-        Mensagem: Contato.Mensagem,
+        Mensagem: msg,
         Assunto: "The Thester recebeu uma nova mensagem",
         Alias: "The Thester Site",
         Key: "e19055b167dd976ae6a93174d3f3a709d5c43043" 
