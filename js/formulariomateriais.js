@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     switch(id[0]){
         case 'Ebook':
-            fileName = "\\Ebooks\\";
+            fileName = "Ebooks/";
             break;
         default:
             Erro('Tipo Arquivo não encontrado!');
