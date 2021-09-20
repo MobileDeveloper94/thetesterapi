@@ -78,7 +78,7 @@ function LoginCheck(){
 
     var obj = { obj: JSON.stringify(data)};
   
-  $.post( "https://thethestermailing.000webhostapp.com/autenticacao.php", obj)
+    $.post( "https://thethestermailing.000webhostapp.com/autenticacao.php", obj)
       .done(function( data ) {
         console.log(data);
           if(data.sucesso){
@@ -87,9 +87,10 @@ function LoginCheck(){
           }else{
             window.location.href = "login.html";
           }         
-  });
+    });
 
   }else{
     window.location.href = "login.html";
   }
 }
+

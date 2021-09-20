@@ -29,16 +29,19 @@
         <div style="height: 40px;"></div>
         <form>
             <div class="form-group">
-              <input type="text" class="form-control" id="lblogin" placeholder="Login">
+              <input type="text" class="form-control" id="lbLogin" placeholder="Login">
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" id="lbSenha" placeholder="Senha">
-              </div>
+            </div>
+            <div class="form-group">
+              <span style='color:red'><small id="lbErro"></small></span>
+          </div>
           </form>
         <div style="height: 40px;"></div>
 
         <p class="lead">
-          <a href="index.html" class="btn btn-lg btn-light"><i class="fas fa-key"></i> Entrar</a>
+          <button class="btn btn-lg btn-light" id="btnEntrar"><i class="fas fa-key"></i> Entrar</button>
         </p>
       </main>
 
@@ -50,13 +53,11 @@
     </div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
