@@ -35,7 +35,7 @@ var htmlMenu = `
           <hr>
         </li>
         <li class="nav-item">
-          <a class="nav-link link-menu-top" href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+          <a class="nav-link link-menu-top" href="#" onclick='Logout()'><i class="fas fa-sign-out-alt"></i> Sair</a>
         </li>
         <li class="nav-item text-center">
           <small> The Thester &copy; 2021</small>
@@ -94,3 +94,17 @@ function LoginCheck(){
   }
 }
 
+function Logout(){
+  var data = {
+    action: 'LOGOUT',
+    key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
+    token: token  
+  };
+
+  var obj = { obj: JSON.stringify(data)};
+
+  $.post( "https://thethestermailing.000webhostapp.com/autenticacao.php", obj)
+    .done(function( data ) {
+      window.location.href = "login.html";         
+  });  
+}
