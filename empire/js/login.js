@@ -1,5 +1,12 @@
 $(document).ready(function(){
     $('#btnEntrar').click(Login);
+    
+});
+
+$(document).on('keypress',function(e) {
+  if(e.which == 13) {
+      Login();
+  }
 });
 
 function Login(){
