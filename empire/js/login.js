@@ -35,7 +35,8 @@ function Login(){
           console.log(data);
             if(data.sucesso){
               
-              window.location.href = "index.html?token=" + data.token;
+              window.location.href = "index.html";
+              setCookie('empiretoken', data.token, 1); 
             }else{
                 $('#lbErro').html('<i class="fas fa-exclamation-triangle"></i> Login ou senha inválidos.');
                 $("input").prop('disabled', false);
