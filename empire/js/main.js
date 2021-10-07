@@ -13,7 +13,10 @@ var htmlMenu = `
   <nav id="listMenu" class="sidebar d-md-block bg-light">
     <div class="sidebar-sticky">
       <ul class="nav flex-column">
-        <li class="nav-item">
+       <li class="nav-item">
+        &nbsp;
+       </li>
+       <li class="nav-item">
           <a class="nav-link list-menu" href="index.html">
           <i class="fas fa-home"></i>
           Início 
