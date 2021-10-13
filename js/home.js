@@ -20,7 +20,7 @@ $(window).scroll(function () {
 if(enableButtonWhatsapp == "1"){
     (function () {
         var options = {
-            whatsapp: "+55(11)98717-5315", // WhatsApp number
+            whatsapp: "+55(11)97852-6516", // WhatsApp number
             call_to_action: "Fale Conosco Agora!", // Call to action
             position: "left", // Position may be 'right' or 'left'
         };
@@ -33,5 +33,5 @@ if(enableButtonWhatsapp == "1"){
 
 //onload
 $(document).ready(function(){
-    $('.gCdMUP').text('');
+    
 });
