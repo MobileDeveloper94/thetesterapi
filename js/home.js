@@ -30,3 +30,8 @@ if(enableButtonWhatsapp == "1"){
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
 }
+
+//onload
+$(document).ready(function(){
+    $('.gCdMUP').text('');
+});
