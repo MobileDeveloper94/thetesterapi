@@ -8,9 +8,11 @@ if($('#enableButtonWhatsapp').val()){
 $(window).scroll(function () {
     if ($(this).scrollTop()) {
         $('.navbar-custom').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
+        $('.dropdown-menu').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
     }else{
         
         $('.navbar-custom').attr('style',"background-color: #011170!important");
+        $('.dropdown-menu').attr('style',"background-color: #011170!important");
     }
 });
 
