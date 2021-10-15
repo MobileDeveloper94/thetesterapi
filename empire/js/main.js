@@ -2,13 +2,18 @@ var dadosGet = {};
 var token = '';
 var idUser = 0;
 var htmlMenu = `
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" >
 <div class="navbar col-12 mr-0">
-<a class="nav-link link-menu-top" href="#"> <img src="./images/thethester.png" class="img-fluid" width="25px" /> The Thester | Empire</a>
 
+  <a class="nav-link link-menu-top" href="#"> <img src="./images/thethester.png" class="img-fluid" width="25px" /> The Thester | Empire</a>
+
+  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="true" aria-controls="collapseMenu" onclick='ExpandeMain()'>
+    <i class="fas fa-bars"></i> <span id="txtBtnMenu">Hide</span>
+  </button>
+  
 </div>
 </nav>
-<div class="container-fluid">
+<div class="container-fluid collapse show" id="collapseMenu">
 <div class="row">
   <nav id="listMenu" class="sidebar d-md-block bg-light">
     <div class="sidebar-sticky">
@@ -42,13 +47,13 @@ var htmlMenu = `
         </li>
         <li class="nav-item text-center">
           <small> The Thester &copy; 2021</small>
-        </li>
+        </li>        
       </ul>
-
     </div>
   </nav>
 `;
 
+//onload
 $(document).ready(function(){
   $("body").prepend(htmlMenu);
   var title = $('title').text().split(" | ");
@@ -126,4 +131,17 @@ function setCookie(cname, cvalue, exdays) {
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   let expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function ExpandeMain() {
+  setTimeout(function(){
+    if($('#main').hasClass('col-9')){
+      $('#main').attr('class', 'col-12 ml-auto pt-3 px-4');
+      $('#txtBtnMenu').text('Show');
+    }else{
+      $('#main').attr('class', 'col-9 col-lg-10 ml-auto pt-3 px-4');
+      $('#txtBtnMenu').text('Hide');
+    } 
+  }, 250);
+  
 }
