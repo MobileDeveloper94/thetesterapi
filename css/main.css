@@ -6,7 +6,7 @@
   /*start Navbar*/
   .navbar-custom {
     background-color: #011170!important; 
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
   }
   .nav-link{
     color:#d9d9d9 !important;
@@ -55,4 +55,20 @@
   .home a:hover, footer a:hover{
     color:#FFFFFF;  
   }
+
+  .space{
+    height: 40px;
+}
+
+.titleBar{
+    background-image: url('../images/titleBar1.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    padding: 50px  
+}
+
+.titleText{
+    color:#FFF; font-size: 4em; 
+    -webkit-text-stroke: 1pt black
+}
   
