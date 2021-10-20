@@ -36,7 +36,7 @@ function LoadNoticias(){
   };
   var obj = { obj: JSON.stringify(data)};
   
-  $.post( "http://thethestermailing.000webhostapp.com/noticia.php", obj)
+  $.post( "https://thethestermailing.000webhostapp.com/noticia.php", obj)
       .done(function( data ) {
         if(data.sucesso){
           var html = '';
@@ -120,7 +120,7 @@ function Desativar(id){
     };
     var obj = { obj: JSON.stringify(data)};
     
-    $.post( "http://thethestermailing.000webhostapp.com/noticia.php", obj)
+    $.post( "https://thethestermailing.000webhostapp.com/noticia.php", obj)
         .done(function( data ) {
           if(data.sucesso){
             var row = data.dados.dados[0];
@@ -141,7 +141,7 @@ function Desativar(id){
             
             var obj2 = { obj: JSON.stringify(data2)};
     
-            $.post( "http://thethestermailing.000webhostapp.com/noticia.php", obj2)
+            $.post( "https://thethestermailing.000webhostapp.com/noticia.php", obj2)
                 .done(function( data ) {
                   window.location.href = 'noticias.html?pagina=' + pagina;  
                 });              
