@@ -44,16 +44,16 @@ var htmlFooter = `
     <div class="col-md-4">
       <ul style="list-style: none;">
         <li>
-          <h6><a href="#">Serviços</a></h6>
+          <h6><a href="servicos.html">Serviços</a></h6>
         </li>
         <li>
-          <h6><a href="#">Diário de Bordo</a></h6>
+          <h6><a href="diario-de-bordo.html">Diário de Bordo</a></h6>
         </li>
         <li>
-          <h6><a href="#">Política de Privacidade</a></h6>
+          <h6><a href="politica-de-privacidade.html">Política de Privacidade</a></h6>
         </li>
         <li>
-          <h6><a href="#">Contato</a></h6>
+          <h6><a href="contato.html">Contato</a></h6>
         </li>               
      </ul>  
       <div style="height: 20px;"></div>
@@ -85,6 +85,21 @@ var htmlFooter = `
 </div>     
 </div> 
 </footer>
+
+<div class="alert alert-dismissible fade show" id="alertCookie" role="alert">
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <strong>Atenção!</strong> Este site utiliza <a href="politica-de-privacidade.html" target="_blank">cookies essenciais de navegação</a>, a fim de garantir uma melhor experiência de uso. Ao continuar a navegação, você concorda com o uso dessa tecnologia e com os termos da <a href="politica-de-privacidade.html" target="_blank">Política de privacidade.</a>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-primary" onclick="AllowCookie()" data-dismiss="alert" aria-label="Close">
+          Aceito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 //habilitar whatsapp
@@ -118,6 +133,36 @@ if(enableButtonWhatsapp == "1"){
         s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
+}
+
+//verificar se existe cookie do usuario e esconder footer
+function CookieIsAllowed(){
+  var name = "allowCookie" + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  var count = 0;
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+        if (c.substring(name.length, c.length) == "S") {
+            
+            $("#alertCookie").hide();
+        }
+    }
+  }
+  
+}
+
+//aceita cookie
+function AllowCookie() {
+  var d = new Date();
+  d.setTime(d.getTime() + (365*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "allowCookie" + "=" + "S" + ";" + expires + ";path=/";
+  
 }
 
 //onload
