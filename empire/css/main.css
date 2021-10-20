@@ -27,3 +27,7 @@ small{
     font-size: x-small;
     color: #808080;
 }
+
+.space{
+    height: 40px;
+}

@@ -8,7 +8,7 @@ var htmlMenu = `
   <a class="nav-link link-menu-top" href="#"> <img src="./images/thethester.png" class="img-fluid" width="25px" /> The Thester | Empire</a>
 
   <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="true" aria-controls="collapseMenu" onclick='ExpandeMain()'>
-    <i class="fas fa-bars"></i> <span id="txtBtnMenu">Hide</span>
+    <i class="fas fa-bars"></i>
   </button>
   
 </div>
@@ -137,10 +137,10 @@ function ExpandeMain() {
   setTimeout(function(){
     if($('#main').hasClass('col-9')){
       $('#main').attr('class', 'col-12 ml-auto pt-3 px-4');
-      $('#txtBtnMenu').text('Show');
+    
     }else{
       $('#main').attr('class', 'col-9 col-lg-10 ml-auto pt-3 px-4');
-      $('#txtBtnMenu').text('Hide');
+     
     } 
   }, 250);
   
