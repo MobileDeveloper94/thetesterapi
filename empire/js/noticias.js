@@ -52,7 +52,9 @@ function LoadNoticias(){
               html = html + '<td><i class="fas fa-times" style="color:red"></i></td>';
             }
             html = html + '<td><a href="noticia.html?id=' + row.id + '" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar notícia"><i class="fas fa-pen"></i></a> ';
-            html = html + '<a href="#" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Desativar notícia" onclick="Desativar('+row.id+');"><i class="fas fa-times"></i></a></td>';
+            if(row.fl_ativo == 1){
+              html = html + '<a href="#" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Desativar notícia" onclick="Desativar('+row.id+');"><i class="fas fa-times"></i></a></td>';
+            }
             html = html + '</tr>';
           });
 
