@@ -28,13 +28,13 @@ var htmlMenu = `
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link list-menu" href="#">
+          <a class="nav-link list-menu" href="noticias.html">
           <i class="fas fa-newspaper"></i>  
           Notícias
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link list-menu" href="#">
+          <a class="nav-link list-menu" href="materiais.html">
           <i class="fas fa-file"></i>
             Materiais
           </a>
