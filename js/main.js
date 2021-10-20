@@ -168,5 +168,6 @@ function AllowCookie() {
 //onload
 $(document).ready(function(){
    $('body').prepend(htmlMenu); 
-   $('body').append(htmlFooter); 
+   $('body').append(htmlFooter);
+   CookieIsAllowed(); 
 });
