@@ -60,6 +60,15 @@ var htmlMenu = `
   </nav>
 `;
 
+var userAgent = '';
+
+userAgent = userAgent + 'mobile: ' + navigator.userAgentData.mobile + ', ';
+userAgent = userAgent + 'SO: ' + navigator.userAgentData.platform + ', ';
+
+navigator.userAgentData.brands.forEach(function(linha){
+  userAgent = userAgent + linha.brand + '/v' + linha.version + ', ';
+});
+
 //onload
 $(document).ready(function(){
   $("body").prepend(htmlMenu);

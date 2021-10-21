@@ -81,7 +81,7 @@ function Salvar(){
       fl_ativo: ativo, 
       fl_redes: redes,
       id_login: idUser, 
-      useragent: navigator.userAgent, 
+      useragent: userAgent, 
       id_noticia: idNoticia
     };
   
@@ -105,7 +105,7 @@ function Salvar(){
       fl_ativo: ativo, 
       fl_redes: redes,
       id_login: idUser, 
-      useragent: navigator.userAgent
+      useragent: userAgent
     };
 
   var obj2 = { obj: JSON.stringify(data2)};
