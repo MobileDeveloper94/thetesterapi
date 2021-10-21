@@ -2,7 +2,6 @@ var data = {};
 var pagina = 1;
 $(document).ready(function(){
     LoginCheck();
-    
     ParametrosGet();
     
     if(data['pagina']){

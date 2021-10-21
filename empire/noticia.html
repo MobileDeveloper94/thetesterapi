@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Empire | Notícias</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <main role="main" id="main" class="col-9 col-lg-10 ml-auto pt-3 px-4">
+      <div class="container">
+        <h2 id="titlePage"></h2>
+        <hr>
+        <form>
+          <div class="form-group">
+            <label for="lbTitulo">Título</label>
+            <input type="text" class="form-control" id="lbTitulo" placeholder="Título da notícia...">
+          </div>
+          <div class="form-group">
+            <label for="lbTexto">Texto</label>
+            <textarea class="form-control" id="lbTexto" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="lbImagem">Imagem</label>
+            <input type="file" class="form-control-file" id="lbImagem" onchange="encodeImageFileAsURL();">
+            <div id="imgTest"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="lbData">Data publicação</label>
+              <input type="text" class="form-control" id="lbData" readonly>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="lbLogin">Login criação</label>
+              <input type="text" class="form-control" id="lbLogin" readonly>
+            </div>
+            
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flAtivo">
+              <label class="form-check-label" for="flAtivo">
+                Ativo
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flHome">
+              <label class="form-check-label" for="flHome">
+                Mostrar na Home
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flRedes">
+              <label class="form-check-label" for="flRedes">
+                Redes Sociais
+              </label>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary" id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
+    
+    <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/noticia.js"></script>
+  </body>
+</html>
