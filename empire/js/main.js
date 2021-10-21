@@ -43,6 +43,13 @@ var htmlMenu = `
           <hr>
         </li>
         <li class="nav-item">
+          <div class="text-center">
+            <img src="./images/person.png" class="img-fluid" width="50px" />
+            <br>
+             <span id="lbNomeUser" style="font-size: 7pt"><i class="fas fa-circle" style="color:orange"></i> Not Logged</span>
+          </div>
+        </li>
+        <li class="nav-item text-center">
           <a class="nav-link link-menu-top" href="#" onclick='Logout()'><i class="fas fa-sign-out-alt"></i> Sair</a>
         </li>
         <li class="nav-item text-center">
@@ -85,7 +92,8 @@ function LoginCheck(){
           if(data.sucesso){
             token = data.token;
             setCookie('empiretoken', data.token, 1);
-            idUser = data.id;   
+            idUser = data.id;
+            $("#lbNomeUser").html('<i class="fas fa-circle" style="color:green"></i> ' + data.nome);   
           }else{
             window.location.href = "login.html";
           }         
