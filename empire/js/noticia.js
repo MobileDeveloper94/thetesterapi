@@ -169,9 +169,13 @@ function LoadDados(){
             $('.nicEdit-main').html(row.texto);
             if(row.imagem){
               $('#imgTest').html('<img src="' + row.imagem + '" />');
+            }else{
+              $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
             }
             $('#lbData').val(row.dta_noticia);
             $('#lbLogin').val(row.id_login);
+            $('#lbLoginText').val(row.nome_login);
+            
 
             if(row.fl_ativo == 1){
               $('#flAtivo').attr('checked', 'checked');
@@ -199,4 +203,8 @@ function LoadDados(){
     
 
   }
+}
+
+function RemoveImg(){
+  $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
 }

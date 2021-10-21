@@ -34,7 +34,12 @@
           <div class="form-group">
             <label for="lbImagem">Imagem</label>
             <input type="file" class="form-control-file" id="lbImagem" onchange="encodeImageFileAsURL();">
-            <div id="imgTest"></div>
+            <br>
+            <div id="imgTest">
+              <b style="color:gray">Nenhuma imagem selecionada</b>
+            </div>
+            <br>
+            <a href="#" class="link" style="color:red" onclick="RemoveImg()"><i class="fas fa-trash-alt"></i> Remover imagem</a>
           </div>
           <div class="form-row">
             <div class="form-group col-md-3">
@@ -43,7 +48,8 @@
             </div>
             <div class="form-group col-md-3">
               <label for="lbLogin">Login criação</label>
-              <input type="text" class="form-control" id="lbLogin" readonly>
+              <input type="text" class="form-control" id="lbLoginText" readonly>
+              <input type="hidden" class="form-control" id="lbLogin" readonly>
             </div>
             
           </div>
