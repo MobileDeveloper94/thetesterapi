@@ -3,7 +3,6 @@ var idNoticia = 0;
 $(document).ready(function(){
   LoginCheck();
   ParametrosGet();
-  console.log(document.location);
   
   if(data['id']){
     idNoticia = data['id'];
@@ -39,10 +38,10 @@ function Salvar(){
       $('#lbTitulo').focus();
       return;
     }
-
-    if($('#lbTexto').val() == ''){
+    
+    if($('.nicEdit-main').html() == ''){
       alert('Preencha um texto');
-      $('#lbTexto').focus();
+      $('.nicEdit-main').focus();
       return;
     }
 
@@ -76,8 +75,8 @@ function Salvar(){
       action: "ALTERAR", 
       key: "e19055b167dd976ae6a93174d3f3a709d5c43043",
       titulo: $('#lbTitulo').val(),
-      texto: $('#lbTexto').val(),
-      imagem:$("#imgTest img").attr('src'),
+      texto: $('.nicEdit-main').html(),
+      imagem: $("#imgTest img").attr('src'),
       fl_home: home, 
       fl_ativo: ativo, 
       fl_redes: redes,
@@ -100,8 +99,8 @@ function Salvar(){
       action: "INCLUIR", 
       key: "e19055b167dd976ae6a93174d3f3a709d5c43043",
       titulo: $('#lbTitulo').val(),
-      texto: $('#lbTexto').val(),
-      imagem:$("#imgTest img").attr('src'),
+      texto: $('.nicEdit-main').html(),
+      imagem: $("#imgTest img").attr('src'),
       fl_home: home, 
       fl_ativo: ativo, 
       fl_redes: redes,
@@ -167,7 +166,7 @@ function LoadDados(){
             var row = data.dados.dados[0];
             
             $('#lbTitulo').val(row.titulo);
-            $('#lbTexto').val(row.texto);
+            $('.nicEdit-main').html(row.texto);
             if(row.imagem){
               $('#imgTest').html('<img src="' + row.imagem + '" />');
             }

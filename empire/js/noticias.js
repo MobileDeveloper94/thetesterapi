@@ -43,7 +43,6 @@ function LoadNoticias(){
             html = html + '<tr>';
             html = html + '<th scope="row">' + row.id + '</th>';
             html = html + '<td>' + row.titulo + '</td>';
-            html = html + '<td>' + row.texto + '</td>';
             html = html + '<td>' + row.dta_noticia + '</td>';
             if(row.fl_ativo == 1){
               html = html + '<td><i class="fas fa-check" style="color:green"></i></td>';
