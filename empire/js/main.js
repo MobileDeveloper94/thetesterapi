@@ -44,7 +44,7 @@ var htmlMenu = `
         </li>
         <li class="nav-item">
           <div class="text-center">
-            <img src="./images/person.png" class="img-fluid" width="50px" />
+            <img src="./images/person2.png" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 2px" width="50px" />
             <br>
              <span id="lbNomeUser" style="font-size: 7pt"><i class="fas fa-circle" style="color:orange"></i> Not Logged</span>
           </div>
@@ -93,7 +93,10 @@ function LoginCheck(){
             token = data.token;
             setCookie('empiretoken', data.token, 1);
             idUser = data.id;
-            $("#lbNomeUser").html('<i class="fas fa-circle" style="color:green"></i> ' + data.nome);   
+            $("#lbNomeUser").html('<i class="fas fa-circle" style="color:green"></i> ' + data.nome);
+            if(data.imagem != ''){
+              $('#imagemUser').attr('src', data.imagem);
+            }   
           }else{
             window.location.href = "login.html";
           }         
