@@ -97,7 +97,7 @@ function LoginCheck(){
   
     $.post( "https://thethestermailing.000webhostapp.com/autenticacao.php", obj)
       .done(function( data ) {
-        console.log(data);
+        
           if(data.sucesso){
             token = data.token;
             setCookie('empiretoken', data.token, 1);
