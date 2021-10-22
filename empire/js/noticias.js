@@ -40,19 +40,28 @@ function LoadNoticias(){
         if(data.sucesso){
           var html = '';
           data.dados.dados.forEach(function(row){
+            console.log(row);
             html = html + '<tr>';
             html = html + '<th scope="row">' + row.id + '</th>';
             html = html + '<td>' + row.titulo + '</td>';
+            if(row.imagem != ''){
+              html = html + '<td><img src="' + row.imagem + '" height="35px"/></td>';
+            }else{
+              html = html + '<td> </td>';
+            }
             html = html + '<td>' + row.dta_noticia + '</td>';
+
             if(row.fl_ativo == 1){
               html = html + '<td><i class="fas fa-check" style="color:green"></i></td>';
             }else{
               html = html + '<td><i class="fas fa-times" style="color:red"></i></td>';
             }
-            html = html + '<td><a href="noticia.html?id=' + row.id + '" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar notícia"><i class="fas fa-pen"></i></a> ';
-            if(row.fl_ativo == 1){
-              html = html + '<a href="#" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Desativar notícia" onclick="Desativar('+row.id+');"><i class="fas fa-times"></i></a></td>';
+            if(row.fl_home == 1){
+              html = html + '<td><i class="fas fa-check" style="color:green"></i></td>';
+            }else{
+              html = html + '<td><i class="fas fa-times" style="color:red"></i></td>';
             }
+            html = html + '<td><a href="noticia.html?id=' + row.id + '" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar notícia"><i class="fas fa-pen"></i></a> ';
             html = html + '</tr>';
           });
 
@@ -108,44 +117,3 @@ function LoadNoticias(){
   });
 }
 
-function Desativar(id){
-  if(confirm("Deseja realmente desativar esta notícia?")){
-
-    var data = {
-      action: 'LISTAR',
-      key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
-      pagina: 0,
-      fl_ativo: 0,
-      id_noticia: id 
-    };
-    var obj = { obj: JSON.stringify(data)};
-    
-    $.post( "https://thethestermailing.000webhostapp.com/noticia.php", obj)
-        .done(function( data ) {
-          if(data.sucesso){
-            var row = data.dados.dados[0];
-
-            var data2 = {
-              action: "ALTERAR", 
-              key: "e19055b167dd976ae6a93174d3f3a709d5c43043",
-              titulo: row.titulo,
-              texto: row.texto,
-              imagem:row.imagem,
-              fl_home: row.fl_home, 
-              fl_ativo: 0, 
-              fl_redes: row.fl_redes,
-              id_login: idUser, 
-              useragent: navigator.userAgent, 
-              id_noticia: id
-            };
-            
-            var obj2 = { obj: JSON.stringify(data2)};
-    
-            $.post( "https://thethestermailing.000webhostapp.com/noticia.php", obj2)
-                .done(function( data ) {
-                  window.location.href = 'noticias.html?pagina=' + pagina;  
-                });              
-          }
-        });
-  }
-}
