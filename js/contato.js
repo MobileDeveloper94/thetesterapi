@@ -64,7 +64,7 @@ function EnviaEmail(){
     $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
         .done(function( data ) {
             console.log(data);
-            /*$('#modalLoading').modal('hide');*/git 
+            /*$('#modalLoading').modal('hide');*/
             $('#modalSuccess').modal('show');
     });
 
