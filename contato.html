@@ -11,19 +11,67 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
     <!--CSS-->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    
+    <link href="css/contato.css" rel="stylesheet" type="text/css" />
+    <title>contato</title>
   </head>
   <body>
 
   <div class="container">
     
-    <div class="offset-1 row">
-    <h1>Conheça O Gabriel</h1>
-    
-		<p >A The Thester nasce a partir de uma visão, em que as empresas vão manter a competitividade no mercado com as rápidas mudanças causada pela revolução 4.0</p>
+
+                                                                                                                                                                    
+   <section class="sec">
+
+    <div class="contato">
+      <h3>Preencha o formulario de contato</h3>
+
+      <!--formulario de contato-->
+      <form class="form"  method="POST">
+
+        <input id="cont-email"class="cust"  name="email" type="email"><!--aqui será o input de e-mail-->
+        <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small> <!--aqui será a mensagem de erro-->
+
+        <input id="cont-nome" class="cust" name="Nome" type="text"> <!--aqui será o input do nome-->
+        <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Nome com conteúdo vazio.</span></small> <!--aqui será a mensagem de erro-->
+
+
+        <textarea class="cust" name="mesage" placeholder="Digite sua mensagem..."> </textarea><!--Aqui será o espaço a mensagem-->
+          <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Mensagem com conteúdo vazio.</span></small>
+
+        
+
+        <input type="checkbox" class="cust" id="ocnt-check">
+        <label for="cbDadosContato">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+        <small><span class="text-danger txtErro" style="display:none" id="txtErroContato">Por favor, selecione que está de ciente para que possamos continuar.</span></small>
+
+        <input type="checkbox" class="cust" id="ocnt-check">
+        <label class="form-check-label" for="cbDadosMarketing">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+        <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Por favor, selecione que estamos autorizados para lhe enviar e-mail's para contato.</span></small><br>
+
+
+        <button type="button" onclick="EnviaEmail()" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+   </section>
   </div> 
 
-<div style="height: 40px;"></div>
+  <!-- Modal Success-->
+<div class="modal fade" id="modalSuccess" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body text-center">
+          <i class="fas fa-check-double fa-2x" style="color:blue"></i> Enviado com sucesso.
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height: 40px;">
+</div>
 </div>
   <input type="hidden" id="enableButtonWhatsapp" value="1"/>
   </body>
