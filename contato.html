@@ -23,37 +23,47 @@
    <section class="sec">
 
     <div class="contato">
-      <h3>Preencha o formulario de contato</h3>
+      <h3>Preencha o formulário de contato</h3>
 
       <!--formulario de contato-->
-      <form class="form"  method="POST">
+      <section title="contato">
 
-        <input id="cont-email"class="cust"  name="email" type="email"><!--aqui será o input de e-mail-->
-        <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small> <!--aqui será a mensagem de erro-->
+                   <form class="form">
+                        <div class="form-group">
+                            <label for="txtNome">Nome</label>
+                            <input type="text" class="form-control" id="cont-nome" aria-describedby="emailHelp" placeholder="Seu nome">
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Nome com conteúdo vazio.</span></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEmail">E-mail</label>
+                            <input type="email" class="form-control" id="cont-Email" placeholder="Seu e-mail">
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtMensagem">Mensagem</label>
+                            <textarea class="form-control" id="cont-enviar" rows="3"></textarea>
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Mensagem com conteúdo vazio.</span></small>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="cbDadosContato">
+                            <label class="form-check-label" for="cbDadosContato">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroContato"><i class="fas fa-exclamation-triangle"></i> Por favor, indique que está de acordo em entrarmos em contato.</span></small>
+                            
+                        </div>
+                        <div class="space"></div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="cbDadosMarketing">
+                            <label class="form-check-label" for="cbDadosMarketing">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+                            
+                        </div>
+                        <div class="space"></div>
+                        
+                        <button type="button" onclick="EnviaEmail()" class="btn btn-primary">Enviar</button>
+                    </form>
+                    <div class="space"></div>
+                </div>
 
-        <input id="cont-nome" class="cust" name="Nome" type="text"> <!--aqui será o input do nome-->
-        <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Nome com conteúdo vazio.</span></small> <!--aqui será a mensagem de erro-->
-
-
-        <textarea class="cust" name="mesage" placeholder="Digite sua mensagem..."> </textarea><!--Aqui será o espaço a mensagem-->
-          <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Mensagem com conteúdo vazio.</span></small>
-
-        
-
-        <input type="checkbox" class="cust" id="ocnt-check">
-        <label for="cbDadosContato">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
-        <small><span class="text-danger txtErro" style="display:none" id="txtErroContato">Por favor, selecione que está de ciente para que possamos continuar.</span></small>
-
-        <input type="checkbox" class="cust" id="ocnt-check">
-        <label class="form-check-label" for="cbDadosMarketing">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
-        <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Por favor, selecione que estamos autorizados para lhe enviar e-mail's para contato.</span></small><br>
-
-
-        <button type="button" onclick="EnviaEmail()" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
-   </section>
-  </div> 
+    </section>
 
   <!-- Modal Success-->
 <div class="modal fade" id="modalSuccess" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
@@ -72,7 +82,7 @@
 
 <div style="height: 40px;">
 </div>
-</div>
+ </div>
   <input type="hidden" id="enableButtonWhatsapp" value="1"/>
   </body>
 
