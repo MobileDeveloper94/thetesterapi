@@ -50,7 +50,7 @@ var htmlMenu = `
              <span id="lbNomeUser" style="font-size: 7pt"><i class="fas fa-circle" style="color:orange"></i> Not Logged</span>
           </div>
         </li>
-        <li class="nav-item" id="userOptions">
+        <li class="nav-item" style="font-size: 8pt" id="userOptions">
         </li>
         <li class="nav-item text-center">
           <small> The Thester &copy; 2021</small>
@@ -108,8 +108,8 @@ function LoginCheck(){
             if(data.imagem != ''){
               $('#imagemUser').attr('src', data.imagem);
             }
-            var html = '<a class="nav-link link-menu-top" href="user-config.html" ><i class="fas fa-cog"></i> Configurações</a>';
-            html = html + '<a class="nav-link link-menu-top" href="#" onclick=\'Logout()\'><i class="fas fa-sign-out-alt"></i> Sair</a>';
+            var html = '<a class="nav-link link-menu-top" href="user-config.html" style="padding-top: 4px; padding-bottom: 4px" ><i class="fas fa-cog"></i> Configurações</a>';
+            html = html + '<a class="nav-link link-menu-top" href="#" onclick=\'Logout()\' style="padding-top: 4px; padding-bottom: 4px"><i class="fas fa-sign-out-alt"></i> Sair</a>';
             $('#userOptions').html(html);
           }else{
             window.location.href = "login.html";
