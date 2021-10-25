@@ -32,7 +32,8 @@ function Login(){
       key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
       email: user,
       senha: pass,
-      useragent: navigator.userAgent 
+      useragent: navigator.userAgent,
+      alias: 'thethester' 
     };
   
     var obj = { obj: JSON.stringify(data)};

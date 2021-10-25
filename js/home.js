@@ -24,7 +24,7 @@ $(document).ready(function(){
                         }
                         
                         html = html + '<div class="d-block w-100 hm-cr" style=" background-image: url(\'' + rows[i].imagem + '\'); background-color: #cccccc; background-position: center; background-repeat: no-repeat; background-size: cover; height: 100vh">';
-                        html = html + '<img class="img-fluid d-block w-100 hm-cr" src="images/border.png" alt="Slide"/>';
+                        //html = html + '<img class="img-fluid d-block w-100 hm-cr" src="images/border.png" alt="Slide"/>';
                         html = html + '</div>';
                         html = html + '<div class="carousel-caption">';
                         html = html + '<h3>' + rows[i].titulo + '</h3>';
