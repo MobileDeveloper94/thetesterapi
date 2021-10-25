@@ -16,17 +16,16 @@ $(document).ready(function(){
       .done(function( data ) {
         
           if(data.sucesso){
-            var row = data.dados.dados[0];
 
-            if(row.imagem){
-              $('#imgTest').html('<img src="' + row.imagem + '" />');
+            if(data.imagem != ''){
+              $('#imgTest').html('<img src="' + data.imagem + '" />');
             }else{
               $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
             }
 
-            $('#lbNome').val(row.nome);
-            $('#lbId').val(row.id);
-            $('#lbEmail').val(row.email);
+            $('#lbNome').val(data.nome);
+            $('#lbId').val(data.id);
+            $('#lbEmail').val(data.email);
 
           }else{
             alert('Erro, dados do usuário não retornados.');
