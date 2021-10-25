@@ -1,22 +1,63 @@
 $(document).ready(function(){
-    await LoginCheck();
+    //LoadDados ja engloba loginCheck
     LoadDados();
     $('#btnSalvar').click(SalvarAlteracoes);
-  });
+});
 
 function LoadDados(){
-  console.log('LoadDados init');
-    if(imgUser != ''){
-      $('#imgTest').html('<img src="' + imgUser + '" width="150px"/>');
-    }else{
-      $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
+  if(document.location.origin == "file://"){
+    idUser = 1;
+  }else{
+    token = getCookie('empiretoken');
+    if(token !== ''){
+
+      var data = {
+        action: 'CHECK',
+        key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
+        token: token  
+      };
+
+      var obj = { obj: JSON.stringify(data)};
+    
+      $.post( "https://thethestermailing.000webhostapp.com/autenticacao.php", obj)
+        .done(function( data ) {
+        console.log('LoginCheck retorno dados');
+          
+            if(data.sucesso){
+              token = data.token;
+              setCookie('empiretoken', data.token, 1);
+              idUser = data.id;
+              nomeUser = data.nome;
+              imgUser = data.imagem;
+              emailUser = data.email;
+
+              $("#lbNomeUser").html('<i class="fas fa-circle" style="color:green"></i> ' + nomeUser);
+              if(imgUser != ''){
+                $('#imagemUser').attr('src', imgUser);
+              }
+              var html = '<a class="nav-link link-menu-top" href="user-config.html" style="padding-top: 4px; padding-bottom: 4px" ><i class="fas fa-cog"></i> Configurações</a>';
+              html = html + '<a class="nav-link link-menu-top" href="#" onclick=\'Logout()\' style="padding-top: 4px; padding-bottom: 4px"><i class="fas fa-sign-out-alt"></i> Sair</a>';
+              $('#userOptions').html(html);
+
+              if(imgUser != ''){
+                $('#imgTest').html('<img src="' + imgUser + '" width="150px"/>');
+              }else{
+                $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
+              }
+          
+              $('#lbNome').val(nomeUser);
+              $('#lbID').val(idUser);
+              $('#lbEmail').val(emailUser);
+
+            }else{
+              window.location.href = "login.html";
+            }         
+      });
+
+      }else{
+        window.location.href = "login.html";
+      }
     }
-
-    $('#lbNome').val(nomeUser);
-    $('#lbID').val(idUser);
-    $('#lbEmail').val(emailUser);
-  console.log('LoadDados end');
-
 }
 
 function SalvarAlteracoes(){
