@@ -50,7 +50,7 @@ var htmlMenu = `
              <span id="lbNomeUser" style="font-size: 7pt"><i class="fas fa-circle" style="color:orange"></i> Not Logged</span>
           </div>
         </li>
-        <li class="nav-item text-center" id="userOptions">
+        <li class="nav-item" id="userOptions">
         </li>
         <li class="nav-item text-center">
           <small> The Thester &copy; 2021</small>
