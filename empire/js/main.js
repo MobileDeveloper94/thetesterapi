@@ -52,6 +52,9 @@ var htmlMenu = `
         </li>
         <li class="nav-item" style="font-size: 8pt" id="userOptions">
         </li>
+        <li class="nav-item">
+          <hr>
+        </li>
         <li class="nav-item text-center">
           <small> The Thester &copy; 2021</small>
         </li>        
