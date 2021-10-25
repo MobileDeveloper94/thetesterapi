@@ -1,4 +1,7 @@
+var dados = {};
+
 $(document).ready(function(){
+    LoadLogin();
     $('#btnEntrar').click(Login);
     
 });
@@ -33,7 +36,7 @@ function Login(){
       email: user,
       senha: pass,
       useragent: navigator.userAgent,
-      alias: 'thethester' 
+      alias: $('#lbAlias').val() 
     };
   
     var obj = { obj: JSON.stringify(data)};
@@ -76,3 +79,24 @@ function Login(){
     }
     return "";
   }
+
+  function LoadLogin(){
+    var data = {
+      action: 'ASSOCIACAO',
+      key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
+      alias: 'thethester'
+    };
+  
+    var obj = { obj: JSON.stringify(data)};
+    
+    $.post( "http://thethestermailing.000webhostapp.com/autenticacao.php", obj)
+        .done(function( data ) {
+            if(data.sucesso){
+              $('#txtCopy').html(data.dados.nome + ' &copy; 2021');
+              $('#imgLogo').attr('src', data.dados.logo);
+              $('#lbAlias').val(data.dados.alias);
+            }
+        });
+
+  }
+
