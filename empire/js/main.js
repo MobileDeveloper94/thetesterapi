@@ -2,6 +2,10 @@ var dadosGet = {};
 var token = '';
 var idUser = 0;
 var userAgent = '';
+var nomeUser = '';
+var imgUser = '';
+var emailUser = '';
+
 var htmlMenu = `
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" >
 <div class="navbar col-12 mr-0">
@@ -107,9 +111,13 @@ function LoginCheck(){
             token = data.token;
             setCookie('empiretoken', data.token, 1);
             idUser = data.id;
-            $("#lbNomeUser").html('<i class="fas fa-circle" style="color:green"></i> ' + data.nome);
-            if(data.imagem != ''){
-              $('#imagemUser').attr('src', data.imagem);
+            nomeUser = data.nome;
+            imgUser = data.imagem;
+            emailUser = data.email;
+
+            $("#lbNomeUser").html('<i class="fas fa-circle" style="color:green"></i> ' + nomeUser);
+            if(imgUser != ''){
+              $('#imagemUser').attr('src', imgUser);
             }
             var html = '<a class="nav-link link-menu-top" href="user-config.html" style="padding-top: 4px; padding-bottom: 4px" ><i class="fas fa-cog"></i> Configurações</a>';
             html = html + '<a class="nav-link link-menu-top" href="#" onclick=\'Logout()\' style="padding-top: 4px; padding-bottom: 4px"><i class="fas fa-sign-out-alt"></i> Sair</a>';
