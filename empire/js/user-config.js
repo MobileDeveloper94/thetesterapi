@@ -24,7 +24,7 @@ $(document).ready(function(){
             }
 
             $('#lbNome').val(data.nome);
-            $('#lbId').val(data.id);
+            $('#lbID').val(data.id);
             $('#lbEmail').val(data.email);
 
           }else{
