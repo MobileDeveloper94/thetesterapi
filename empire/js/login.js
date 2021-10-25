@@ -89,7 +89,7 @@ function Login(){
   
     var obj = { obj: JSON.stringify(data)};
     
-    $.post( "http://thethestermailing.000webhostapp.com/autenticacao.php", obj)
+    $.post( "https://thethestermailing.000webhostapp.com/autenticacao.php", obj)
         .done(function( data ) {
             if(data.sucesso){
               $('#txtCopy').html(data.dados.nome + ' &copy; 2021');
