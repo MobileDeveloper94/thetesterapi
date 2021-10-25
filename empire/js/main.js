@@ -91,6 +91,7 @@ function detectMobile() { var check = false; (function(a){if(/(android|bb\d+|mee
 
 function LoginCheck(){
   console.log('LoginCheck init');
+  debugger;
   if(document.location.origin == "file://"){
     idUser = 1;
   }else{
