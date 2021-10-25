@@ -18,7 +18,7 @@ $(document).ready(function(){
           if(data.sucesso){
 
             if(data.imagem != ''){
-              $('#imgTest').html('<img src="' + data.imagem + '" width="50px"/>');
+              $('#imgTest').html('<img src="' + data.imagem + '" width="150px"/>');
             }else{
               $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
             }
