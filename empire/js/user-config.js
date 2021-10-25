@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    LoginCheck().then(LoadDados());
+    await LoginCheck();
+    LoadDados();
     $('#btnSalvar').click(SalvarAlteracoes);
   });
 
