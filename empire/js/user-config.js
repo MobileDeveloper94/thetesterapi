@@ -92,6 +92,11 @@ function SalvarAlteracoes(){
     }
   }
 
+  //se uma das senha forem vazias
+  if(($('#newPass').val() != '' && $('#confirm').val() == '') || ($('#newPass').val() == '' && $('#confirm').val() != '')){
+    alert('Preencha os dois campos para alterar a senha!');
+  }
+
   var data = {
     action: 'EDIT',
     key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
