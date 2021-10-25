@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>The Thester | Configurações</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
+    <!--CSS-->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+
+        <form>
+          <div class="form-group">
+            <label for="lbID">Id</label>
+            <input type="text" class="form-control" id="lbID" readonly maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="lbEmail">Email</label>
+            <input type="text" class="form-control" id="lbEmail" readonly maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="lbNome">Nome</label>
+            <input type="text" class="form-control" id="lbNome" maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="newPass">Nova Senha</label>
+            <input type="password" class="form-control" id="newPass" maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="confirm">Confirmar nova Senha</label>
+            <input type="password" class="form-control" id="confirm" maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="lbImagem">Imagem</label>
+            <input type="file" class="form-control-file" id="lbImagem" onchange="encodeImageFileAsURL();">
+            <br>
+            <div id="imgTest">
+              <b style="color:gray">Nenhuma imagem selecionada</b>
+            </div>
+            <br>
+            <a href="#" class="link" style="color:red" onclick="RemoveImg()"><i class="fas fa-trash-alt"></i> Remover imagem</a>
+          </div>
+          
+            <button type="button" class="btn btn-primary" id="btnSalvar">Salvar alterações</button>
+          </form>
+          </div>
+          
+         
+        
+    
+
+    <div class="space"></div>
+</div>
+ 
+<div style="height: 40px;"></div>
+  
+  
+    <input type="hidden" id="enableButtonWhatsapp" value="0"/>
+  </body>
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/user-config.js"></script>
+
+</html>
