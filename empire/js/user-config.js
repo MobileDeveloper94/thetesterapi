@@ -95,6 +95,7 @@ function SalvarAlteracoes(){
   //se uma das senha forem vazias
   if(($('#newPass').val() != '' && $('#confirm').val() == '') || ($('#newPass').val() == '' && $('#confirm').val() != '')){
     alert('Preencha os dois campos para alterar a senha!');
+    return;
   }
 
   var data = {
