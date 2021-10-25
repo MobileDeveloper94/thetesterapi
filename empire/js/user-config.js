@@ -4,6 +4,7 @@ $(document).ready(function(){
   });
 
 function LoadDados(){
+  console.log('LoadDados init');
     if(imgUser != ''){
       $('#imgTest').html('<img src="' + imgUser + '" width="150px"/>');
     }else{
@@ -12,7 +13,9 @@ function LoadDados(){
 
     $('#lbNome').val(nomeUser);
     $('#lbID').val(idUser);
-    $('#lbEmail').val(emailUser);  
+    $('#lbEmail').val(emailUser);
+  console.log('LoadDados end');
+
 }
 
 function SalvarAlteracoes(){
