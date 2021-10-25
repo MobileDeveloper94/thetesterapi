@@ -7,7 +7,7 @@ function LoadDados(){
   var data = {
     action: 'CHECK',
     key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
-    token: token  
+    token: getCookie('empiretoken')  
   };
 
   var obj = { obj: JSON.stringify(data)};
@@ -29,7 +29,7 @@ function LoadDados(){
 
         }else{
           alert('Erro, dados do usuário não retornados.');
-          //window.location.href = 'login.html'
+          window.location.href = 'login.html'
         }
   });
 }
