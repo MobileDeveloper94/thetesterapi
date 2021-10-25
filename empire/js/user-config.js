@@ -5,15 +5,15 @@ $(document).ready(function(){
   });
 
 function LoadDados(){
-    if(data.imagem != ''){
-      $('#imgTest').html('<img src="' + data.imagem + '" width="150px"/>');
+    if(imgUser != ''){
+      $('#imgTest').html('<img src="' + imgUser + '" width="150px"/>');
     }else{
       $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
     }
 
-    $('#lbNome').val(data.nome);
-    $('#lbID').val(data.id);
-    $('#lbEmail').val(data.email);  
+    $('#lbNome').val(nomeUser);
+    $('#lbID').val(idUser);
+    $('#lbEmail').val(emailUser);  
 }
 
 function SalvarAlteracoes(){
