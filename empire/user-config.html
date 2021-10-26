@@ -17,38 +17,42 @@
     <div class="container">
 
         <form>
-          <div class="form-group">
-            <label for="lbID">Id</label>
-            <input type="text" class="form-control" id="lbID" readonly maxlength="100">
-          </div>
-          <div class="form-group">
-            <label for="lbEmail">Email</label>
-            <input type="text" class="form-control" id="lbEmail" readonly maxlength="100">
-          </div>
-          <div class="form-group">
-            <label for="lbNome">Nome</label>
-            <input type="text" class="form-control" id="lbNome" maxlength="100">
-          </div>
-          <div class="form-group">
-            <label for="newPass">Nova Senha</label>
-            <input type="password" class="form-control" id="newPass" maxlength="100">
-          </div>
-          <div class="form-group">
-            <label for="confirm">Confirmar nova Senha</label>
-            <input type="password" class="form-control" id="confirm" maxlength="100">
-          </div>
-          <div class="form-group">
-            <label for="lbImagem">Imagem</label>
-            <input type="file" class="form-control-file" id="lbImagem" onchange="encodeImageFileAsURL();">
-            <br>
+          <div class="form-group text-center">
             <div id="imgTest">
-              <b style="color:gray">Nenhuma imagem selecionada</b>
+              <img src="./images/person2.png" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 4px" width="200px">
             </div>
+            <br>
+            <label class="btn btn-primary btn-sm">
+              <input type="file" class="form-control-file" id="lbImagem" style="display:none" onchange="encodeImageFileAsURL();">
+              <i class="fas fa-pen"></i> Selecionar imagem
+            </label>
             <br>
             <a href="#" class="link" style="color:red" onclick="RemoveImg()"><i class="fas fa-trash-alt"></i> Remover imagem</a>
           </div>
+          <div class="form-group col-md-4 offset-md-4">
+            <input type="text" class="form-control text-center" id="lbNome" maxlength="100">
+          </div>
+          
+            <input type="hidden" class="form-control col-2" id="lbID">
+         
+          <div class="form-group col-md-4 offset-md-4">
+            <input type="text" class="form-control text-center" id="lbEmail" readonly maxlength="100">
+          </div>
+          
+          <div class="form-group col-md-4 offset-md-4">
+            <label for="newPass">Nova Senha</label>
+            <input type="password" class="form-control text-center" id="newPass" maxlength="100">
+          </div>
+          <div class="form-group col-md-4 offset-md-4">
+            <label for="confirm">Confirmar nova Senha</label>
+            <input type="password" class="form-control text-center" id="confirm" maxlength="100">
+          </div>
+          
           <div class="space"></div>
+          <div class="form-group col-md-4 offset-md-4 text-center">
             <button type="button" class="btn btn-primary" id="btnSalvar">Salvar alterações</button>
+          </div>
+            
           </form>
           </div>        
 </div>

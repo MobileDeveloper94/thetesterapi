@@ -42,7 +42,7 @@ function LoadDados(){
               if(imgUser != ''){
                 $('#imgTest').html('<img src="' + imgUser + '" width="150px"/>');
               }else{
-                $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
+                $('#imgTest').html('<img src="./images/person2.png" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 4px" width="200px">');
               }
           
               $('#lbNome').val(nomeUser);
@@ -77,9 +77,13 @@ function SalvarAlteracoes(){
       alert('A imagem é muito grande');
       return;
     }else{
-      imagem = $("#imgTest img").attr('src');
+      if($("#imgTest img").attr('src').substring(0,10) == 'data:image'){
+        imagem = $("#imgTest img").attr('src');
+      }
     }
   }
+  console.log(imagem);
+  debugger;
 
   //se as duas senhas <> vazio
   if($('#newPass').val() != '' && $('#confirm').val() != ''){
@@ -132,15 +136,16 @@ function encodeImageFileAsURL() {
 
     fileReader.onload = function(fileLoadedEvent) {
       var srcData = fileLoadedEvent.target.result; // <--- data: base64
-      var newImage = document.createElement('img');
-      newImage.src = srcData;
+      var newImage = '<img src="';
+      newImage = newImage + srcData;
+      newImage = newImage + '" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 4px" width="200px">';;
      
-      document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+      document.getElementById("imgTest").innerHTML = newImage;
     }
     fileReader.readAsDataURL(fileToLoad);
   }
 }
 
 function RemoveImg(){
-  $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
+  $('#imgTest').html('<img src="./images/person2.png" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 4px" width="200px">');
 }
