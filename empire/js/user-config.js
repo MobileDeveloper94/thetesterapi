@@ -40,7 +40,7 @@ function LoadDados(){
               $('#userOptions').html(html);
 
               if(imgUser != ''){
-                $('#imgTest').html('<img src="' + imgUser + '" width="150px"/>');
+                $('#imgTest').html('<img src="' + imgUser + '" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 4px" width="200px"/>');
               }else{
                 $('#imgTest').html('<img src="./images/person2.png" id="imagemUser" class="img-fluid rounded-circle" style="border: solid gray 4px" width="200px">');
               }
