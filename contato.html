@@ -15,16 +15,17 @@
     <title>contato</title>
   </head>
   <body>
-
+    <div style="height: 40px"></div>
   <div class="container">
     
 
                                                                                                                                                                     
    <section class="sec">
-
+    
     <div class="contato">
-      <h3>Preencha o formulário de contato</h3>
-
+      <h3>Contato</h3>
+      <h6 style="color: gray">Preencha o formulário abaixo para que entremos em contato</h6>
+      <hr>
       <!--formulario de contato-->
       <section title="contato">
 
@@ -59,7 +60,7 @@
                         </div>
                         <div class="space"></div>
                         
-                        <button type="button" onclick="EnviaEmail()" class="btn btn-primary">Enviar</button>
+                        <button type="button" onclick="EnviaEmail()" class="btn btn-primary" id="btnEnviar">Enviar</button>
                     </form>
                     <div class="space"></div>
                 </div>
@@ -71,11 +72,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       
-      <div class="modal-body text-center">
-          <i class="fas fa-check-double fa-2x" style="color:blue"></i> Enviado com sucesso.
+      <div class="modal-body text-center" id="msgModal">
+          Mensagem recebida com sucesso. Em breve entraremos em contato!
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location.href = 'contato.html';">Fechar</button>
       </div>
     </div>
   </div>
@@ -94,7 +95,6 @@
 <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 <script src="js/contato.js"></script>
-<script src="js/valiMail.js"></script>
 
 
 

@@ -1,14 +1,3 @@
-function SelectContato(destino){
-    if(destino === "email"){
-       $('#contatoSelect').fadeOut();
-       $('#contatoEmail').fadeIn();
-
-    }
-    else if(destino === "whatsapp"){
-        window.open("https://api.whatsapp.com/send?phone=5511978526516&text=Olá%20The%20Thester,%20Quero%20mais%20informacoes%20sobre%20Seguranca%20da%20Informacao");
-    }
-}
-
 function EnviaEmail(){
     var Contato = {
         Nome: $('#cont-nome').val(),
@@ -44,6 +33,9 @@ function EnviaEmail(){
     
     /*tudo ok, prosseguir
     $('#modalLoading').modal('show');*/
+    $("#btnEnviar").prop('disabled',true);
+    $("#btnEnviar").html('<i class="fab fa-empire fa-spin"></i> Aguarde...');
+
     
     var msg = "Voce recebeu uma mensagem:<br>";
     msg = msg + "De: " + Contato.Nome + "<br>";  
@@ -63,9 +55,12 @@ function EnviaEmail(){
     
     $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
         .done(function( data ) {
-            console.log(data);
-            /*$('#modalLoading').modal('hide');*/
-            $('#modalSuccess').modal('show');
+            if(data.sucesso){
+                $('#modalSuccess').modal('show');
+            }else{
+                $('#msgModal').html('<p>Erro ao enviar mensagem, aguarde alguns segundo e tente novamente.</p>');
+                $('#modalSuccess').modal('show');
+            }            
     });
 
     
