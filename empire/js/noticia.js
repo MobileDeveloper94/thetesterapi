@@ -136,10 +136,11 @@ function encodeImageFileAsURL() {
 
     fileReader.onload = function(fileLoadedEvent) {
       var srcData = fileLoadedEvent.target.result; // <--- data: base64
-      var newImage = document.createElement('img');
-      newImage.src = srcData;
+      var newImage = '<img src="';
+      newImage = newImage + srcData;
+      newImage = newImage + '" id="imagemUser" class="img-fluid">';;
      
-      document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+      document.getElementById("imgTest").innerHTML = newImage;
     }
     fileReader.readAsDataURL(fileToLoad);
   }
@@ -168,7 +169,7 @@ function LoadDados(){
             $('#lbTitulo').val(row.titulo);
             $('.nicEdit-main').html(row.texto);
             if(row.imagem){
-              $('#imgTest').html('<img src="' + row.imagem + '" />');
+              $('#imgTest').html('<img src="' + row.imagem + '" id="imagemUser" class="img-fluid" />');
             }else{
               $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
             }

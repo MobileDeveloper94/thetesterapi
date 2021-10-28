@@ -32,14 +32,17 @@
             <textarea class="form-control" name="lbTexto" id="lbTexto" rows="5" maxlength="8000"></textarea>
           </div>
           <div class="form-group">
-            <label for="lbImagem">Imagem</label>
-            <input type="file" class="form-control-file" id="lbImagem" onchange="encodeImageFileAsURL();">
-            <br>
+            
             <div id="imgTest">
               <b style="color:gray">Nenhuma imagem selecionada</b>
             </div>
             <br>
+            <label for="lbImagem" class="btn btn-primary btn-sm"><i class="fas fa-image"></i> Selecionar Imagem
+              <input type="file" class="form-control-file" id="lbImagem" onchange="encodeImageFileAsURL();" style="display:none">
+            </label>
+            <br>
             <a href="#" class="link" style="color:red" onclick="RemoveImg()"><i class="fas fa-trash-alt"></i> Remover imagem</a>
+            
           </div>
           <div class="form-row">
             <div class="form-group col-md-3">
@@ -83,10 +86,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://js.nicedit.com/nicEdit-latest.js"></script>
+    
     <!-- JS -->
   <script src="js/main.js"></script>
   <script src="js/noticia.js"></script>
+  <script src="js/textarea.js"></script>
 
   <script type="text/javascript">
     bkLib.onDomLoaded(function() { nicEditors.allTextAreas() }); // convert all text areas to rich text editor on that page
