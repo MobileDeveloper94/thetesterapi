@@ -61,7 +61,7 @@ function EnviaEmail(){
     };
     // console.log(objMail);
     
-    $.post( "http://thethestermailing.000webhostapp.com/email.php", objMail)
+    $.post( "https://thethestermailing.000webhostapp.com/email.php", objMail)
         .done(function( data ) {
             console.log(data);
             /*$('#modalLoading').modal('hide');*/
