@@ -1,7 +1,7 @@
 //menu
 var htmlMenu = `
 <nav class="navbar-custom navbar navbar-expand-sm navbar-dark bg-dark sticky-top" id="menu">
-<img class="hm" src="images/The-thester.jpg" alt="The Thester" width="50px">
+<img class="hm" src="images/logo_the_thester.png" alt="The Thester" width="60px">
 <button class="navbar-toggler"   data-toggle="collapse" data-target="#navegacao">
   <span class="navbar-toggler-icon"></span>
 </button>

@@ -11,38 +11,53 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
     <!--CSS-->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    
+    <style>
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        color: #f2f2f2;
+        border: 0px;
+        background-image: none;
+      }
+
+    </style>
   </head>
   <body class="home">
 
   <div class="container">
     
-    <div class="offset-1 row">
-    <h1>Conheça a The Thester </h1>
-    
-		<p >A The Thester nasce a partir de uma visão, em que as empresas vão manter a competitividade no mercado com as rápidas mudanças causada pela revolução 4.0</p>
-  </div> 
+    <div class="row">
+      <div class="offset-md-1 col-md-4" style="margin-top: 15vh">
+        <h2>Conheça a The Thester </h2>
+        <p>A The Thester nasce a partir de uma visão, em que as empresas vão manter a competitividade no mercado com as rápidas mudanças causada pela revolução 4.0</p>
+            
+      </div>
 
-    <!--Start Carousel-->
-
-  <div id="carouselExampleFade" class=" carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner" id="carouselHome">
-    
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
-</div>
-<!--End carousel-->
-
+      <div class="offset-md-1 col-md-6">
+        <!--Start Carousel-->
+        <div id="carouselExampleFade" class=" carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner" id="carouselHome">
+            
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+              <i class="fas fa-caret-left fa-6x"></i>
+            </span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+              <i class="fas fa-caret-right fa-6x"></i>
+            </span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+        <!--End carousel-->
+      </div>
+    </div>
 <div style="height: 40px;"></div>
-</div>
   <input type="hidden" id="enableButtonWhatsapp" value="1"/>
+
+</div>
   </body>
 
 <!-- JS -->

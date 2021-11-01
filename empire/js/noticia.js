@@ -58,10 +58,10 @@ function Salvar(){
     }
 
     if($("#imgTest img").attr('src')){
-      if($("#imgTest img").attr('src').length > 180000){
-        alert('A imagem é muito grande');
-        return;
-      }
+      // if($("#imgTest img").attr('src').length > 180000){
+      //   alert('A imagem é muito grande');
+      //   return;
+      // }
     }
     
 

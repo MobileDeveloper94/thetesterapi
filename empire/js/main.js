@@ -10,7 +10,7 @@ var htmlMenu = `
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" >
 <div class="navbar col-12 mr-0">
 
-  <a class="nav-link link-menu-top" href="#"> <img src="./images/thethester.png" class="img-fluid" width="25px" /> The Thester | Empire</a>
+  <a class="nav-link link-menu-top" href="#"> <img src="./images/logo_the_thester.png" class="img-fluid" width="35px" /> The Thester | Empire</a>
 
   <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="true" aria-controls="collapseMenu" onclick='ExpandeMain()'>
     <i class="fas fa-bars"></i>
