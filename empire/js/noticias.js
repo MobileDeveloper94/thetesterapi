@@ -133,4 +133,12 @@ function LoadCarouselHome(){
 
 }
 
-
+function SelectNoticia(val){
+  var id = val.id.replace('pill', '');
+  
+  $('.divtables').fadeOut();
+  $('.pill').removeClass('active');
+  $('#pill' + id).addClass('active');
+  $('#table' + id).fadeIn();
+  
+}

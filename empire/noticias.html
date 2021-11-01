@@ -20,89 +20,68 @@
   <body>
     <main role="main" id="main" class="col-9 col-lg-10 ml-auto pt-3 px-4">
           <div class="starter-template">
-            <a href="noticia.html" class="btn btn-primary"><i class="fas fa-plus"></i> Novo</a>
+            <a href="noticia.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nova Notícia</a>
             
             <div class="space"></div>
 
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header" id="headingOne" style="background-color: #e6e6e6">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Todas as Notícias
-                    </button>
-                  </h5>
-                </div>
-            
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="card-body">
-                    <table class="table table-hover table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Título</th>
-                          <th scope="col">Img Prev.</th>
-                          <th scope="col">Data Criação</th>
-                          <th scope="col">&nbsp; </th>
-                        </tr>
-                      </thead>
-                      <tbody id="tbDados">
-                        
-                      </tbody>
-                    </table>
-        
-                    <div class="text-center">
-                      <nav aria-label="...">
-                        <ul class="pagination" id="paginacao">
-                          
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingTwo"  style="background-color: #e6e6e6">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Carossel da Home
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    <table class="table table-hover table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Título</th>
-                          <th scope="col">Img Prev.</th>
-                          <th scope="col">Data Criação</th>
-                          <th scope="col">&nbsp; </th>
-                        </tr>
-                      </thead>
-                      <tbody id="tbDadosHome">
-                        
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingThree"  style="background-color: #e6e6e6">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Diário de Bordo
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                  <div class="card-body">
-                    &nbsp;
-                  </div>
-                </div>
+
+            <ul class="nav nav-pills justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link pill active" href="#" onclick="SelectNoticia(this)" id="pill0">Todas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pill" href="#" onclick="SelectNoticia(this)" id="pill1">Carossel Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pill" href="#" onclick="SelectNoticia(this)" id="pill2">Diário de Bordo</a>
+              </li>
+            </ul>
+      <div class="space"></div>
+
+            <div id="table0" class="divtables" >
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Img Prev.</th>
+                    <th scope="col">Data Criação</th>
+                    <th scope="col">&nbsp; </th>
+                  </tr>
+                </thead>
+                <tbody id="tbDados">
+                  
+                </tbody>
+              </table>
+  
+              <div class="text-center">
+                <nav aria-label="...">
+                  <ul class="pagination" id="paginacao">
+                    
+                  </ul>
+                </nav>
               </div>
             </div>
+
+            <div id="table1" class="divtables" style="display:none">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Img Prev.</th>
+                    <th scope="col">Data Criação</th>
+                    <th scope="col">&nbsp; </th>
+                  </tr>
+                </thead>
+                <tbody id="tbDadosHome">
+                  
+                </tbody>
+              </table>
+            </div>
+                  
+                    
+                  
 
             </div>  
       <div class="space"></div>
