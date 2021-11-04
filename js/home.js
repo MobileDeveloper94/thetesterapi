@@ -22,13 +22,23 @@ $(document).ready(function(){
                         }else{
                             html = html + '<div class="carousel-item">';
                         }
-                        
                         html = html + '<div class="rounded-circle" style="background-image: url(\'' + rows[i].imagem + '\'); background-color: #cccccc; background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%;">';
-                        html = html + '<img class="img-fluid w-100" src="images/circulo-branco.png" alt="Slide"/>';
+                        if(rows[i].link){
+                            html = html + '<a href="' + rows[i].link + '">';
+                            html = html + '<img class="img-fluid w-100" src="images/circulo-branco.png" alt="Slide"/>';
+                            html = html + '</a>';
+                        }else{
+                            html = html + '<img class="img-fluid w-100" src="images/circulo-branco.png" alt="Slide"/>';
+                        }
                         html = html + '</div>';
                         html = html + '<div class="carousel-caption">';
-                        html = html + '<h3>' + rows[i].titulo + '</h3>';
-                        html = html + '<p>' + rows[i].texto + '</p>';
+                        if(rows[i].link){
+                            html = html + '<a href="' + rows[i].link + '"><h3>' + rows[i].titulo + '</h3></a>';
+                            html = html + '<a href="' + rows[i].link + '"><p>' + rows[i].texto + '</p></a>';
+                        }else{
+                            html = html + '<h3>' + rows[i].titulo + '</h3>';
+                            html = html + '<p>' + rows[i].texto + '</p>';
+                        }
                         html = html + '</div>';
                         html = html + '</div>';
                     }

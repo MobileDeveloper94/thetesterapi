@@ -77,6 +77,7 @@ function Salvar(){
       titulo: $('#lbTitulo').val(),
       texto: $('.nicEdit-main').html(),
       imagem: $("#imgTest img").attr('src'),
+      link: $("#lbLink").val(),
       fl_home: home, 
       fl_ativo: ativo, 
       fl_redes: redes,
@@ -101,6 +102,7 @@ function Salvar(){
       titulo: $('#lbTitulo').val(),
       texto: $('.nicEdit-main').html(),
       imagem: $("#imgTest img").attr('src'),
+      link: $("#lbLink").val(),
       fl_home: home, 
       fl_ativo: ativo, 
       fl_redes: redes,
@@ -173,6 +175,11 @@ function LoadDados(){
             }else{
               $('#imgTest').html('<b style="color:gray">Nenhuma imagem selecionada</b>');
             }
+
+            if(row.link){
+              $('#lbLink').val(row.link);
+            }
+
             $('#lbData').val(row.dta_noticia);
             $('#lbLogin').val(row.id_login);
             $('#lbLoginText').val(row.nome_login);
