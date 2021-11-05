@@ -33,17 +33,17 @@ function Salvar(){
     var home = 0; 
     var redes = 0;
     
-    if($('#lbTitulo').val() == ''){
-      alert('Preencha um título');
-      $('#lbTitulo').focus();
-      return;
-    }
+    // if($('#lbTitulo').val() == ''){
+    //   alert('Preencha um título');
+    //   $('#lbTitulo').focus();
+    //   return;
+    // }
     
-    if($('.nicEdit-main').html() == ''){
-      alert('Preencha um texto');
-      $('.nicEdit-main').focus();
-      return;
-    }
+    // if($('.nicEdit-main').html() == ''){
+    //   alert('Preencha um texto');
+    //   $('.nicEdit-main').focus();
+    //   return;
+    // }
 
     if($('#flAtivo').prop('checked')){
       ativo = 1;
