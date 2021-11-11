@@ -157,7 +157,7 @@ function LoadDados(){
       action: 'LISTAR',
       key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
       pagina: 0,
-      fl_ativo: 0,
+      filtro: 'TODAS',
       id_noticia: idNoticia 
     };
     var obj = { obj: JSON.stringify(dataNoticia)};

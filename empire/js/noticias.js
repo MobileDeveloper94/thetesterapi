@@ -1,11 +1,17 @@
 var data = {};
 var pagina = 1;
+var filtro = 'TODAS';
+
 $(document).ready(function(){
     LoginCheck();
     ParametrosGet();
     
     if(data['pagina']){
       pagina = data['pagina'];
+    }
+
+    if(data['filtro']){
+      filtro = data['filtro'];
     }
 
     LoadNoticias();
@@ -30,7 +36,7 @@ function LoadNoticias(){
     action: 'LISTAR',
     key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
     pagina: pagina,
-    fl_ativo: 0,
+    filtro: filtro,
     id_noticia: 0 
   };
   var obj = { obj: JSON.stringify(data)};
