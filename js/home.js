@@ -19,6 +19,15 @@ $(document).ready(function(){
                     for(var i =0; i<rows.length; i++){
                         if(i == 0){
                             html = html + '<div class="carousel-item active">';
+                            var html2 = '';
+                            html2 = html2 + '<h3 style="margin-bottom: 1em">' + rows[i].titulo + '</h3>';
+                            if(rows[i].texto){
+                                html2 = html2 + '<p>' + rows[i].texto + '</p>';
+                            }
+                            if(rows[i].link){
+                                html2 = html2 + '<a href="' + rows[i].link + '">Saiba mais</a>';
+                            }
+                            $("#carTxt").html(html2);
                         }else{
                             html = html + '<div class="carousel-item">';
                         }
@@ -31,15 +40,10 @@ $(document).ready(function(){
                             html = html + '<img class="img-fluid w-100" src="images/circulo-branco.png" alt="Slide"/>';
                         }
                         html = html + '</div>';
-                        html = html + '<div class="carousel-caption">';
-                        if(rows[i].link){
-                            html = html + '<a href="' + rows[i].link + '"><h3>' + rows[i].titulo + '</h3></a>';
-                            html = html + '<a href="' + rows[i].link + '"><p>' + rows[i].texto + '</p></a>';
-                        }else{
-                            html = html + '<h3>' + rows[i].titulo + '</h3>';
-                            html = html + '<p>' + rows[i].texto + '</p>';
-                        }
-                        html = html + '</div>';
+                        html = html + '<input type="hidden" value="' + rows[i].texto + '" id="carTexto" />';
+                        html = html + '<input type="hidden" value="' + rows[i].titulo + '" id="carTitulo" />';
+                        html = html + '<input type="hidden" value="' + rows[i].link + '" id="carLink" />';
+
                         html = html + '</div>';
                     }
 
@@ -49,4 +53,18 @@ $(document).ready(function(){
 
  }
  
- 
+ $('#carouselExampleFade').on('slid.bs.carousel', function () {
+    var texto = $('.carousel-item.active #carTexto').val();
+    var titulo = $('.carousel-item.active #carTitulo').val();
+    var link = $('.carousel-item.active #carLink').val();
+    var html = '';
+    html = html + '<h3 style="margin-bottom: 1em">' + titulo + '</h3>';
+    if(texto != "" && texto != null){
+        html = html + '<p>' + texto + '</p>';
+    }
+    if(link != "" && link != null){
+        html = html + '<a href="' + link + '">Saiba mais</a>';
+    }
+    console.log(link);
+    $("#carTxt").html(html);
+  });
