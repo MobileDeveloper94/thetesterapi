@@ -1,7 +1,7 @@
 //menu
 var htmlMenu = `
 <nav class="navbar-custom navbar navbar-expand-sm navbar-dark bg-dark sticky-top" id="menu">
-<img class="hm" src="images/logo_the_thester.png" alt="The Thester" width="60px">
+<img class="hm" src="images/logo-the_thester_w.png" alt="The Thester" width="60px">
 <button class="navbar-toggler"   data-toggle="collapse" data-target="#navegacao">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -13,10 +13,10 @@ var htmlMenu = `
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">Serviços</a>
     <div class="dropdown-menu drop">
-    <a class="dropdown-item" href="assistencia-tecnica.html"><i >Assistência técnica</i></a>
-    <a class="dropdown-item" href="suporte-ti.html"><i >Suporte de TI</i></a>
-    <a class="dropdown-item" href="consultoria-ti.html"><i >Consultoria em TI</i></a>
-    <a class="dropdown-item" href="gestao-ti.html"><i >Gestão de TI</i></a>
+      <a class="dropdown-item" href="assistencia-tecnica.html"><i >Assistência técnica</i></a>
+      <a class="dropdown-item" href="suporte-ti.html"><i >Suporte de TI</i></a>
+      <a class="dropdown-item" href="consultoria-ti.html"><i >Consultoria em TI</i></a>
+      <a class="dropdown-item" href="gestao-ti.html"><i >Gestão de TI</i></a>
     </div>
   </li> 
   <li class="nav-item">
@@ -113,12 +113,12 @@ if($('#enableButtonWhatsapp').val()){
 //mudar cor do menu ao rolar scroll
 $(window).scroll(function () {
     if ($(this).scrollTop()) {
-        $('.navbar-custom').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
-        $('.dropdown-menu').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
+        $('.navbar-custom').attr('style',"background-color: rgba(255, 255, 255, 0.7)!important");
+        $('.dropdown-menu').attr('style',"background-color: rgba(255, 255, 255, 0.7)!important");
     }else{
         
-        $('.navbar-custom').attr('style',"background-color: #011170!important");
-        $('.dropdown-menu').attr('style',"background-color: #011170!important");
+        $('.navbar-custom').attr('style',"background-color: #fff!important");
+        $('.dropdown-menu').attr('style',"background-color: #fff!important");
     }
 });
 
