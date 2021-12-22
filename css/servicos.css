@@ -87,6 +87,15 @@
 }
 
 .btn-primary{
-  background-color:#011170 !important;
-  border-color: #011170 !important;
+  background-color:#FFF !important;
+  border-color: #FFF !important;
+}
+
+p{
+  font-size: 16pt;
+}
+
+h5{
+  font-size: 20pt;
+  font-weight:bold;
 }
