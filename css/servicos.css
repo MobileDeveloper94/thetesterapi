@@ -91,11 +91,11 @@
   border-color: #FFF !important;
 }
 
-p{
+#texto p{
   font-size: 16pt;
 }
 
-h5{
+#texto h5{
   font-size: 20pt;
   font-weight:bold;
 }
