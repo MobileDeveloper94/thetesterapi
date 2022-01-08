@@ -11,13 +11,7 @@ var htmlMenu = `
     <a class="nav-link" href="home.html">Home</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">Serviços</a>
-    <div class="dropdown-menu drop">
-    <a class="dropdown-item" href="assistencia-tecnica.html"><i >Assistência técnica</i></a>
-    <a class="dropdown-item" href="suporte-ti.html"><i >Suporte de TI</i></a>
-    <a class="dropdown-item" href="consultoria-ti.html"><i >Consultoria em TI</i></a>
-    <a class="dropdown-item" href="gestao-ti.html"><i >Gestão de TI</i></a>
-    </div>
+    <a class="nav-link" href="servicos.html">Serviços</a>
   </li> 
   <li class="nav-item">
     <a class="nav-link" href="" data-toggle="dropdown">Diário de bordo</a>
@@ -117,8 +111,8 @@ $(window).scroll(function () {
         $('.dropdown-menu').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
     }else{
         
-        $('.navbar-custom').attr('style',"background-color: #011170!important");
-        $('.dropdown-menu').attr('style',"background-color: #011170!important");
+        $('.navbar-custom').attr('style',"background-color: #fff !important");
+        $('.dropdown-menu').attr('style',"background-color: #fff !important");
     }
 });
 
