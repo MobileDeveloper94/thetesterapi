@@ -11,10 +11,16 @@ var htmlMenu = `
     <a class="nav-link" href="home.html">Home</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link" href="servicos.html">Serviços</a>
+    <a class="nav-link dropdown-toggle" href="servicos.html" data-toggle="dropdown">Serviços</a>
+    <div class="dropdown-menu drop">
+    <a class="dropdown-item" href="servicos.html#assistencia"><i >Assistência técnica</i></a>
+    <a class="dropdown-item" href="servicos.html#consultoria"><i >Consultoria em TI</i></a>
+    <a class="dropdown-item" href="servicos.html#gestao"><i >Gestão de TI</i></a>
+    <a class="dropdown-item" href="servicos.html#suporte"><i >Suporte de TI</i></a>
+    </div>
   </li> 
   <li class="nav-item">
-    <a class="nav-link" href="" data-toggle="dropdown">Diário de bordo</a>
+    <a class="nav-link" href="diario-de-bordo.html" data-toggle="dropdown">Diário de bordo</a>
   </li> 
   <li class="nav-item">
     <a class="nav-link" href="politica-de-privacidade.html">Politica de Privacidade</a>
@@ -33,15 +39,13 @@ var htmlFooter = `
 <div style="height: 40px;"></div>
 <div class="container-fluid">
 <div class="row">
- <div class="col-md-4 col-xs-10 offset-xs-2 contact-box text-center">
-  <p class="main-tittle">Copyright &copy; 2021 The Thester</p>
+ <div class="col-md-3 col-xs-10 offset-xs-2 contact-box text-center">
+  <p class="main-tittle">Copyright &copy; 2021 The Thester</p>        
   <div style="height: 20px;"></div>
  </div>
-    <div class="col-md-4">
+ 
+ <div class="col-md-3">
       <ul style="list-style: none;">
-        <li>
-          <h6><a href="servicos.html">Serviços</a></h6>
-        </li>
         <li>
           <h6><a href="diario-de-bordo.html">Diário de Bordo</a></h6>
         </li>
@@ -54,7 +58,29 @@ var htmlFooter = `
      </ul>  
       <div style="height: 20px;"></div>
     </div>
-    <div class="col-md-4 col-xs-10 offset-xs-2 contact-box ">
+ 
+ <div class="col-md-3">
+      <ul style="list-style: none;">
+        <li>
+          <h6><a href="servicos.html">Serviços</a></h6>
+        </li>
+        <li>
+          <a href="servicos.html#assistencia">Assistência técnica</a>
+        </li>
+        <li>
+        <a href="servicos.html#consultoria">Consultoria em TI</a>
+        </li>
+        <li>
+        <a href="servicos.html#gestao">Gestão de TI</a>
+        </li>
+        <li>
+        <a href="servicos.html#suporte">Suporte de TI</a>
+        </li>               
+     </ul>  
+      <div style="height: 20px;"></div>
+    </div>
+    
+    <div class="col-md-3 col-xs-10 offset-xs-2 contact-box ">
       <ul style="list-style: none;">
         <li>
           <h6 class="">Redes Sociais</h6>
@@ -111,8 +137,8 @@ $(window).scroll(function () {
         $('.dropdown-menu').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
     }else{
         
-        $('.navbar-custom').attr('style',"background-color: #011170 !important");
-        $('.dropdown-menu').attr('style',"background-color: #011170 !important");
+        $('.navbar-custom').attr('style',"background-color: #011170!important");
+        $('.dropdown-menu').attr('style',"background-color: #011170!important");
     }
 });
 

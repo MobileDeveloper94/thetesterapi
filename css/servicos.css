@@ -5,11 +5,12 @@
 
 /* container-secund*/
 .container-second {
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(25, 25, 112),
-    rgba(0, 0, 139)
-  );
+  background-image: linear-gradient(to right, #010c4c , blue);
+  color: #d9d9d9;
+}
+
+.container-first{
+  background-image: linear-gradient(to right, blue, #010c4c);
   color: #d9d9d9;
 }
 /*start Navbar*/
@@ -103,15 +104,27 @@ footer a:hover {
   border-color: #011170 !important;
 }
 
-#texto p {
+.texto p {
   font-size: 16pt;
 }
-#texto-secundario p {
+.texto-secundario p {
   font-size: 16pt;
   text-align: left;
 }
 
-#texto h5 {
+.texto h5 {
   font-size: 20pt;
   font-weight: bold;
 }
+
+.box-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .h100{
+    height: 100vh;
+  }
+}
+

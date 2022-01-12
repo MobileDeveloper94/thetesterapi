@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,15 +20,57 @@
 	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
 <![endif]-->
   </head>
-  <body >
+  <body>
+
+    <div class="container-fluid home h100">
+        <div class="space"></div>
+        <div class="text-center">
+            <h4>Conheça os serviços que a The Thester têm a lhe oferecer</h4>
+        </div>
+        <div class="space"></div>
+
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <div class="text-center justify-contents-center box-link">
+                    <a href="#assistencia"><img src="images/servico-4.png" class="img-fluid"></a>
+                    <br>
+                    <a href="#assistencia"><h6>Assistência técnica</h6></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="text-center justify-contents-center box-link">
+                    <a href="#consultoria"><img src="images/servico-2.png" class="img-fluid"></a>
+                    <br>
+                    <a href="#consultoria"><h6>Consultoria em TI</h6></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="text-center justify-contents-center box-link">
+                    <a href="#gestao"><img src="images/servico-3.png" class="img-fluid"></a>
+                    <br>
+                    <a href="#gestao"><h6>Gestão em TI</h6></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="text-center justify-contents-center box-link">
+                    <a href="#suporte"><img src="images/servico-1.png" class="img-fluid"></a>
+                    <br>
+                    <a href="#suporte"><h6>Suporte de TI</h6></a>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
+
  <!--
     Asistencia tecnica
  -->
-  <div class="home" class="container"> <!--Inicio da div home-->
+
+ <div class="container-fluid container-first h100" > <!--Inicio da div home-->
     <div class="space"></div>
     <div class="row">
       <div class="offset-md-1 col-md-4"> <!--Esta tag abrange appenas o texto-->
-        <div id="texto"> <!--Incio texto-->
+        <div class="texto" id="assistencia"> <!--Incio texto-->
           <h5>Assistência técnica</h5>
           <div class="space"></div>
 
@@ -43,6 +86,7 @@
         <img src="images/servico-4.png" class="img-fluid" alt="Suporte de TI"/>
       </div> <!--Final da div que abrange a imagem-->
     </div> <!--Final da div home-->
+</div>
 <!--
   Final da area de asistencia técnica
 -->
@@ -50,7 +94,7 @@
 <!--
       Consultoria
 -->
-<div class="container-second"> <!--Inicio do container-second-->
+<div class="container-fluid container-second h100" > <!--Inicio do container-second-->
   <div class="space"></div>
   <div class="row">
 
@@ -59,7 +103,7 @@
       </div>
 
       <div class="offset-md-1 col-md-6"> <!--Esta tag abrange apenas o texto-->
-        <div id="texto"> <!--Inicio do id texto-->
+        <div class="texto" id="consultoria"> <!--Inicio do id texto-->
           <h5>Consultoria em TI</h5>
           <div class="space"></div>
 
@@ -73,6 +117,7 @@
 
     
   </div> <!--Final da div container second-->
+</div>
 <!--
   Final da area consultoria
 -->
@@ -81,11 +126,11 @@
       Gestão
 -->
 
-<div class="home" class="container"> <!--Inicio da dig container-->
+<div class="container-fluid container-first h100" > <!--Inicio da dig container-->
   <div class="space"></div>
   <div class="row">
     <div class="offset-md-1 col-md-4"> <!--Esta tag abrange apenas o texto-->
-      <div id="texto">
+      <div class="texto" id="gestao">
         <h5>Gestão em TI</h5>
          <div class="space"></div>
 
@@ -109,7 +154,7 @@
   Suporte 
 -->
 
-<div class="container-second"> <!--Inicio da tag container second-->
+<div class="container-fluid container-second h100" > <!--Inicio da tag container second-->
   <div class="space"></div>
   <div class="row">
 
@@ -118,7 +163,7 @@
     </div> <!--Final do espaço imagem-->
 
     <div class="offset-md-1 col-md-6"> <!--Esta tag abrange apenas o texto-->
-      <div id="texto">
+      <div class="texto" id="suporte">
         <h5>Suporte de TI</h5>
         <div class="space"></div>
 
@@ -132,14 +177,14 @@
 
   </div> <!--FInal da tag container second-->
 
-<div style="height: 40px;"></div>
-<input type="hidden" id="enableButtonWhatsapp" value="1"/>
 
+  <div style="height: 40px;"></div>
 </div>
 <!--
   Final da area de suporte
 -->
 
+    <input type="hidden" id="enableButtonWhatsapp" value="1"/>
   </body>
 
 <!-- JS -->
