@@ -20,7 +20,7 @@ var htmlMenu = `
     </div>
   </li> 
   <li class="nav-item">
-    <a class="nav-link" href="diario-de-bordo.html" data-toggle="dropdown">Diário de bordo</a>
+    <a class="nav-link" href="diario-de-bordo.html" >Diário de bordo</a>
   </li> 
   <li class="nav-item">
     <a class="nav-link" href="politica-de-privacidade.html">Politica de Privacidade</a>
