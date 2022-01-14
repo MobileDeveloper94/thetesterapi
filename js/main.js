@@ -1,7 +1,9 @@
 //menu
 var htmlMenu = `
 <nav class="navbar-custom navbar navbar-expand-sm navbar-dark bg-dark sticky-top" id="menu">
+<a href="home.html">
 <img class="hm" src="images/logo_the_thester.png" alt="The Thester" width="60px">
+</a>
 <button class="navbar-toggler"   data-toggle="collapse" data-target="#navegacao">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -133,8 +135,8 @@ if($('#enableButtonWhatsapp').val()){
 //mudar cor do menu ao rolar scroll
 $(window).scroll(function () {
     if ($(this).scrollTop()) {
-        $('.navbar-custom').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
-        $('.dropdown-menu').attr('style',"background-color: rgba(1, 17, 112, 0.5)!important");
+        $('.navbar-custom').attr('style',"background-color: rgba(1, 17, 112, 0.4)!important");
+        $('.dropdown-menu').attr('style',"background-color: rgba(1, 17, 112, 0.4)!important");
     }else{
         
         $('.navbar-custom').attr('style',"background-color: #011170!important");
