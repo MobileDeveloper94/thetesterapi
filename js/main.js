@@ -199,6 +199,69 @@ function ValidaEmail(email){
   }
 }
 
+//parametros url
+function ParametrosGet(){
+  var query = location.search.slice(1);
+    var partes = query.split('&');
+    
+    partes.forEach(function (parte) {
+        var chaveValor = parte.split('=');
+        var chave = chaveValor[0];
+        var valor = chaveValor[1];
+        data[chave] = valor;
+    });    
+}
+
+function DataPorExtenso(data){
+  var dados = data.split("-");
+
+  var mes = '';
+  var ano = dados[0];
+
+  switch(dados[1]){
+    case "01":
+      mes = 'Janeiro';
+      break;
+    case "02":
+      mes = 'Fevereiro';
+      break;
+    case "03":
+      mes = 'Março';
+      break;
+    case "04":
+      mes = 'Abril';
+      break;
+    case "05":
+      mes = 'Maio';
+      break;
+    case "06":
+      mes = 'Junho';
+      break;
+    case "07":
+      mes = 'Julho';
+      break;
+    case "08":
+      mes = 'Agosto';
+      break;
+    case "09":
+      mes = 'Setembro';
+      break;
+    case "10":
+      mes = 'Outubro';
+      break;
+    case "11":
+      mes = 'Novembro';
+      break;
+    case "12":
+      mes = 'Dezembro';
+      break;
+  }
+
+  var dia = dados[2].split(" ");
+
+  return dia[0] + " de " + mes + " de " + ano;
+}
+
 //onload
 $(document).ready(function(){
    $('body').prepend(htmlMenu); 

@@ -15,7 +15,6 @@ $(document).ready(function(){
     }
 
     LoadNoticias();
-    LoadCarouselHome();
   });
 
 function ParametrosGet(){
@@ -112,39 +111,24 @@ function LoadNoticias(){
   });
 }
 
-function LoadCarouselHome(){
-  var dataNoticia = {
-    action: 'LISTARHOME',
-    key: 'e19055b167dd976ae6a93174d3f3a709d5c43043',
-};
-  var obj = { obj: JSON.stringify(dataNoticia)};
-  
-  $.post( "https://thethestermailing.000webhostapp.com/noticia.php", obj)
-      .done(function( data ) {
-            if(data.sucesso){
-              var html = '';
-              
-              data.dados.dados.forEach(function(row){
-                html = html + '<tr>';
-                html = html + '<td>' + row.id + '</td>';
-                html = html + '<td>' + row.titulo + '</td>';
-                html = html + '<td><img src="' + row.imagem + '" width="50px" /></td>';
-                html = html + '<td>' + row.dta_noticia + '</td>';
-                html = html + '<td><a href="noticia.html?id=' + row.id + '" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a></td>';
-                html = html + '</tr>';                
-              });
-              $('#tbDadosHome').html(html);
-            } 
-      });
 
-}
 
 function SelectNoticia(val){
   var id = val.id.replace('pill', '');
   
-  $('.divtables').fadeOut();
+
   $('.pill').removeClass('active');
   $('#pill' + id).addClass('active');
-  $('#table' + id).fadeIn();
   
+  if(id == "0"){
+    filtro = 'TODAS';
+  }else if(id == "1"){
+    filtro = 'HOME';
+  }else if(id == "2"){
+    filtro = 'DIARIO';
+  }
+  
+  pagina = 1;
+
+  LoadNoticias();
 }
