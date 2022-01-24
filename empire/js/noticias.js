@@ -30,6 +30,9 @@ function ParametrosGet(){
 }
 
 function LoadNoticias(){
+  $('#table0').hide();
+  $('#divLoad').show();
+
   //noticias
   var data = {
     action: 'LISTAR',
@@ -103,7 +106,9 @@ function LoadNoticias(){
           }
 
           $('#paginacao').html(html);
-                      
+          
+          $('#divLoad').hide();
+          $('#table0').fadeIn();
         }else{
           console.log(data.mensagem);
         }  
