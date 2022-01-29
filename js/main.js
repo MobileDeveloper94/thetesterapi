@@ -34,6 +34,7 @@ var htmlMenu = `
 </div>  
 </nav>    
 `;
+var anoatual = new Date().getFullYear();
 
 //footer
 var htmlFooter = `
@@ -42,7 +43,7 @@ var htmlFooter = `
 <div class="container-fluid">
 <div class="row">
  <div class="col-md-3 col-xs-10 offset-xs-2 contact-box text-center">
-  <p class="main-tittle">Copyright &copy; ` + new Date().getFullYear + ` The Thester</p>        
+  <p class="main-tittle">Copyright &copy; ` + anoatual + ` The Thester</p>        
   <div style="height: 20px;"></div>
  </div>
  
