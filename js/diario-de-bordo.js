@@ -42,7 +42,7 @@ function LoadNoticias(){
                     html = html + '<a href="noticia.html?id=' + arr[i].id + '"><img src="' + arr[i].imagem + '" alt="" style="width:100%"></a>';
                     html = html + '<div class="w3-container">';
                     html = html + '<a href="noticia.html?id=' + arr[i].id + '"><h3><b>' + arr[i].titulo + '</b></h3></a>';
-                    html = html + '<h5>Por Paulo Duarte, <span class="w3-opacity">' + DataPorExtenso(arr[i].dta_noticia) + '</span></h5>';
+                    html = html + '<h5>Por ' + arr[i].nome_login + ' <span class="w3-opacity">' + DataPorExtenso(arr[i].dta_noticia) + '</span></h5>';
                     html = html + '</div>';
     
                     html = html + '<div class="w3-container">';
