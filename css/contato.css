@@ -5,7 +5,11 @@
 .contato {
   width: 100%;
   max-width: 500px;
+<<<<<<< HEAD
   text-align: center;
+=======
+  align: center;
+>>>>>>> gabriel
 }
 
 .form {
