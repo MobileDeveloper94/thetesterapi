@@ -1,3 +1,11 @@
+body {
+  background-image: url(../images/pix-img.jpg);
+  color: white;
+}
+
+body a .btn {
+}
+
 .sec {
   display: flex;
   justify-content: center;
