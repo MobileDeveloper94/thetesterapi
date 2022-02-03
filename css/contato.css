@@ -35,3 +35,18 @@ textarea {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+.btn-custom {
+  color: white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  text-transform: uppercase;
+  transition: background 0.4s;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+.btn-roxo {
+  background: #7c25f9;
+}
