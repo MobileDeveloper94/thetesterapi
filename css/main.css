@@ -93,3 +93,6 @@ footer a:hover {
   background-color: #011170 !important;
   border-color: #011170 !important;
 }
+.dropdown:hover .dropdown-menu{
+  display:block
+}

@@ -18,7 +18,7 @@ $(document).ready(function(){
                     
                     for(var i =0; i<rows.length; i++){
                         if(i == 0){
-                            html = html + '<div class="carousel-item active">';
+                            html = html + '<div class="carousel-item rounded-circle active">';
                             var html2 = '';
                             html2 = html2 + '<h3 style="margin-bottom: 1em">' + rows[i].titulo + '</h3>';
                             if(rows[i].texto){
@@ -29,7 +29,7 @@ $(document).ready(function(){
                             }
                             $("#carTxt").html(html2);
                         }else{
-                            html = html + '<div class="carousel-item">';
+                            html = html + '<div class="carousel-item rounded-circle">';
                         }
                         html = html + '<div class="rounded-circle" style="background-image: url(\'' + rows[i].imagem + '\'); background-color: #cccccc; background-position: center; background-repeat: no-repeat; background-size: cover; height: 100%;">';
                         if(rows[i].link){

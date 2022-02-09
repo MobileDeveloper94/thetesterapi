@@ -71,6 +71,7 @@
     <div class="row">
       <div class="offset-md-1 col-md-4"> <!--Esta tag abrange appenas o texto-->
         <div class="texto" id="assistencia"> <!--Incio texto -->
+          <p class="pd-servico">&nbsp; </p>
           <h5>Assistência técnica</h5>
           <div class="space"></div>
 
@@ -83,6 +84,7 @@
       </div> <!--FInal texto-->
 
       <div class="offset-md-1 col-md-6"> <!--Esta tag abrange apenas a imagem-->
+        <p class="pd-servico">&nbsp; </p>
         <img src="images/servico-4.png" class="img-fluid" alt="Suporte de TI"/>
       </div> <!--Final da div que abrange a imagem-->
     </div> <!--Final da div home-->
@@ -99,11 +101,15 @@
   <div class="row">
 
       <div class="offset-md-1 col-md-4">
+        <p class="pd-servico">&nbsp; </p>
+
         <img src="images/servico-2.png" class="img-fluid" alt="Suporte de TI"/>
       </div>
 
       <div class="offset-md-1 col-md-6"> <!--Esta tag abrange apenas o texto-->
         <div class="texto" id="consultoria"> <!--Inicio do id texto-->
+          <p class="pd-servico">&nbsp; </p>
+
           <h5>Consultoria em TI</h5>
           <div class="space"></div>
 
@@ -131,6 +137,8 @@
   <div class="row">
     <div class="offset-md-1 col-md-4"> <!--Esta tag abrange apenas o texto-->
       <div class="texto" id="gestao">
+        <p class="pd-servico">&nbsp; </p>
+
         <h5>Gestão em TI</h5>
          <div class="space"></div>
 
@@ -142,6 +150,8 @@
     </div><!--Final da tag que abrange apenas o texto-->
 
       <div class="offset-md-1 col-md-6"> <!--Espaço da imagem-->
+        <p class="pd-servico">&nbsp; </p>
+
         <img src="images/servico-3.png" class="img-fluid" alt="Suporte de TI"/>
       </div> <!--Final do espaço da imagem-->
   </div>
@@ -159,11 +169,15 @@
   <div class="row">
 
     <div class="offset-md-1 col-md-4"> <!--Inicio do espaço imagem-->
+      <p class="pd-servico">&nbsp; </p>
+
       <img src="images/servico-1.png" class="img-fluid" alt="Suporte de TI"/>
     </div> <!--Final do espaço imagem-->
 
     <div class="offset-md-1 col-md-6"> <!--Esta tag abrange apenas o texto-->
       <div class="texto" id="suporte">
+        <p class="pd-servico">&nbsp; </p>
+
         <h5>Suporte de TI</h5>
         <div class="space"></div>
 
@@ -194,4 +208,10 @@
 <script src="https://kit.fontawesome.com/3c4dd2f2fb.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 
+<script>
+  $(document).ready(function(){
+    var valor = $('#menu').height() + 'px';
+    $('.pd-servico').css("padding-top", valor);
+  });
+</script>
 </html>

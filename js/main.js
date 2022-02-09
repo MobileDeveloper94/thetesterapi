@@ -13,7 +13,7 @@ var htmlMenu = `
     <a class="nav-link" href="home.html">Home</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="servicos.html" data-toggle="dropdown">Serviços</a>
+    <a class="nav-link dropdown-toggle" href="servicos.html">Serviços</a>
     <div class="dropdown-menu drop">
     <a class="dropdown-item" href="servicos.html#assistencia"><i >Assistência técnica</i></a>
     <a class="dropdown-item" href="servicos.html#consultoria"><i >Consultoria em TI</i></a>
