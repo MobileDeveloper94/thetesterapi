@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>The Thester</title>
+    <title>The Thester | Contato</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,56 +22,44 @@
    <section class="sec">
     
     <div class="contato">
+      <h3>Contato</h3>
+      <h6 style="color: gray">Preencha o formulário abaixo para que entremos em contato</h6>
+      <hr>
       <!--formulario de contato-->
-      <section class="text-center" title="contato">
-
-                  <img class="img2" src="./images/logo_the_thester.png" alt="logo da empresa" class="contato" width="150px" height="150px">
-
-                  <strong><p>@the.thester</p></strong>
-
-                  <br>
-
-                  <strong><p>
-                    Privacy By Design/Default | Segurança da Informação | Cybersecurity | LGPD/GDPR
-                  </p></strong>
+      <section title="contato">
 
                    <form class="form">
-                      
+                        <div class="form-group">
+                            <label for="txtNome">Nome</label>
+                            <input type="text" class="form-control" id="cont-nome" aria-describedby="emailHelp" placeholder="Seu nome">
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroNome"><i class="fas fa-exclamation-triangle"></i> Nome com conteúdo vazio.</span></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEmail">E-mail</label>
+                            <input type="email" class="form-control" id="cont-Email" placeholder="Seu e-mail">
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroEmail"><i class="fas fa-exclamation-triangle"></i> Formato de e-mail inválido.</span></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtMensagem">Mensagem</label>
+                            <textarea class="form-control" id="cont-enviar" rows="3"></textarea>
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroMensagem"><i class="fas fa-exclamation-triangle"></i> Mensagem com conteúdo vazio.</span></small>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="cbDadosContato">
+                            <label class="form-check-label" for="cbDadosContato">Estou ciente que os dados fornecidos serão somente utilizados para fins de contato.</label>
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroContato"><i class="fas fa-exclamation-triangle"></i> Por favor, indique que está de acordo em entrarmos em contato.</span></small>
+                            
+                        </div>
+                        <div class="space"></div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="cbDadosMarketing">
+                            <label class="form-check-label" for="cbDadosMarketing">Autorizo o envio de comunicações para o meu endereço de e-mail.</label>
+                            <small><span class="text-danger txtErro" style="display:none" id="txtErroContato"><i class="fas fa-exclamation-triangle"></i> Por favor, indique que está de acordo com o envio de comunicação para meu e-mail</span></small>
+                            
+                        </div>
                         <div class="space"></div>
                         
-                        <a href="https://www.youtube.com/watch?v=bVD_LzLZ1CY" class="btn btn-lg btn-custom btn-roxo">
-                          Youtube</a>
-
-                        <br>
-                        
-                        <a href="https://thethester.com.br/home.html" class="btn btn-lg btn-custom btn-roxo">
-                          Site</a>
-
-                        <br>
-
-                        <a href="https://api.whatsapp.com/send/?phone=%2B5511978526516&text&app_absent=0" class="btn btn-lg btn-custom btn-roxo">
-                          WhatsApp</a>
-
-                        <br>
-
-                        <a href="https://www.instagram.com/the.thester/" class="btn btn-lg btn-custom btn-roxo">
-                          Instagram</a>
-
-                        <br>
-
-                        <a href="https://t.me/MauroCSL" class="btn btn-lg btn-custom btn-roxo">
-                          Telegram</a> 
-
-                        <br>
-
-                        <a href="https://www.linkedin.com/company/the-thester/" class="btn btn-lg btn-custom btn-roxo">
-                          Linkedin</a>
-                        
-                        <br>
-
-                        <a href="https://www.facebook.com/the.thester" class="btn btn-lg btn-custom btn-roxo">
-                        Facebook</a>
-
+                        <button type="button" onclick="EnviaEmail()" class="btn btn-primary" id="btnEnviar">Enviar</button>
                     </form>
                     <div class="space"></div>
                 </div>

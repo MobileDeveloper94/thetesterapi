@@ -1,8 +1,3 @@
-body {
-  background-image: url(../images/pix-img.jpg);
-  color: white;
-}
-
 body a .btn {
 }
 
@@ -13,11 +8,6 @@ body a .btn {
 .contato {
   width: 100%;
   max-width: 500px;
-<<<<<<< HEAD
-  text-align: center;
-=======
-  align: center;
->>>>>>> gabriel
 }
 
 .form {
