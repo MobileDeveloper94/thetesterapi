@@ -28,7 +28,7 @@ var htmlMenu = `
     <a class="nav-link" href="politica-de-privacidade.html">Politica de Privacidade</a>
   </li>
   <li class=" nav-item">
-  <a class="nav-link" href="links.html">Links</a>
+  <a class="nav-link" href="../links/index.html">Links</a>
   </li>  
   <li class=" nav-item">
     <a class="nav-link" href="contato.html">Contato</a>
