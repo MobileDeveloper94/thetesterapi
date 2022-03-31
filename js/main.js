@@ -1,7 +1,7 @@
 //menu
 var htmlMenu = `
 <nav class="navbar-custom navbar navbar-expand-sm navbar-dark bg-dark sticky-top" id="menu">
-<a href="home.html">
+<a href="./home.html">
 <img class="hm" src="images/logo_the_thester.png" alt="The Thester" width="60px">
 </a>
 <button class="navbar-toggler"   data-toggle="collapse" data-target="#navegacao">
@@ -10,25 +10,28 @@ var htmlMenu = `
 <div class="collapse navbar-collapse pr-5" id="navegacao">
 <ul class="navbar-nav ml-auto">
   <li class="nav-item">
-    <a class="nav-link" href="home.html">Home</a>
+    <a class="nav-link" href="./home.html">Home</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="servicos.html">Serviços</a>
+    <a class="nav-link dropdown-toggle" href="./servicos.html">Serviços</a>
     <div class="dropdown-menu drop">
-    <a class="dropdown-item" href="servicos.html#assistencia"><i >Assistência técnica</i></a>
-    <a class="dropdown-item" href="servicos.html#consultoria"><i >Consultoria em TI</i></a>
-    <a class="dropdown-item" href="servicos.html#gestao"><i >Gestão de TI</i></a>
-    <a class="dropdown-item" href="servicos.html#suporte"><i >Suporte de TI</i></a>
+    <a class="dropdown-item" href="./servicos.html#assistencia"><i >Assistência técnica</i></a>
+    <a class="dropdown-item" href="./servicos.html#consultoria"><i >Consultoria em TI</i></a>
+    <a class="dropdown-item" href="./servicos.html#gestao"><i >Gestão de TI</i></a>
+    <a class="dropdown-item" href="./servicos.html#suporte"><i >Suporte de TI</i></a>
     </div>
   </li> 
   <li class="nav-item">
-    <a class="nav-link" href="diario-de-bordo.html" >Diário de bordo</a>
+    <a class="nav-link" href="./diario-de-bordo.html" >Diário de bordo</a>
   </li> 
   <li class="nav-item">
-    <a class="nav-link" href="politica-de-privacidade.html">Politica de Privacidade</a>
+    <a class="nav-link" href="./politica-de-privacidade.html">Politica de Privacidade</a>
   </li>   
   <li class=" nav-item">
-    <a class="nav-link" href="contato.html">Contato</a>
+    <a class="nav-link" href="./contato.html">Contato</a>
+  </li> 
+  <li class=" nav-item">
+    <a class="nav-link" href="./links/index.html">links</a>
   </li> 
 </ul>
 </div>  
@@ -50,13 +53,13 @@ var htmlFooter = `
  <div class="col-md-3">
       <ul style="list-style: none;">
         <li>
-          <h6><a href="diario-de-bordo.html">Diário de Bordo</a></h6>
+          <h6><a href="./diario-de-bordo.html">Diário de Bordo</a></h6>
         </li>
         <li>
-          <h6><a href="politica-de-privacidade.html">Política de Privacidade</a></h6>
+          <h6><a href="./politica-de-privacidade.html">Política de Privacidade</a></h6>
         </li>
         <li>
-          <h6><a href="contato.html">Contato</a></h6>
+          <h6><a href="./contato.html">Contato</a></h6>
         </li>               
      </ul>  
       <div style="height: 20px;"></div>
@@ -65,19 +68,19 @@ var htmlFooter = `
  <div class="col-md-3">
       <ul style="list-style: none;">
         <li>
-          <h6><a href="servicos.html">Serviços</a></h6>
+          <h6><a href="./servicos.html">Serviços</a></h6>
         </li>
         <li>
-          <a href="servicos.html#assistencia">Assistência técnica</a>
+          <a href="./servicos.html#assistencia">Assistência técnica</a>
         </li>
         <li>
-        <a href="servicos.html#consultoria">Consultoria em TI</a>
+        <a href="./servicos.html#consultoria">Consultoria em TI</a>
         </li>
         <li>
-        <a href="servicos.html#gestao">Gestão de TI</a>
+        <a href="./servicos.html#gestao">Gestão de TI</a>
         </li>
         <li>
-        <a href="servicos.html#suporte">Suporte de TI</a>
+        <a href="./servicos.html#suporte">Suporte de TI</a>
         </li>               
      </ul>  
       <div style="height: 20px;"></div>
